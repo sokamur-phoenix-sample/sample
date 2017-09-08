@@ -19,6 +19,6 @@
 `$ ssh -L 4200:localhost:4200 user_name@Dev-Host(開発環境ホスト)`
 * Rails 起動  
 `$ cd sample （別ターミナル等）`  
-`$ cd bundle exec rails s -b 0.0.0.0`　　
+`$ bundle exec rails s -b 0.0.0.0`　　
 * URL
 <http://Dev-Host(開発環境ホスト):3000>
