@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div *ngIf="player">
+    <table class="baseball-player-detail">
+      <thead>
+        <tr>
+          <th colspan="2">野球選手詳細</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>ＩＤ番号</th>
+          <td>{{player.id}}</td>
+        </tr>
+        <tr>
+          <th>選手名</th>
+          <td>{{player.name}}</td>
+        </tr>
+        <tr>
+          <th>所属チーム</th>
+          <td>{{player.team}}</td>
+        </tr>
+        <tr>
+          <th>ポジション</th>
+          <td>{{player.position}}</td>
+        </tr>
+        <tr>
+          <th>出身地</th>
+          <td>{{player.hometown}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="openModalWithEditComponent()">編集</button>
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">閉じる</button>
+</div>

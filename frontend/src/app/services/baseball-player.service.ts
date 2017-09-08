@@ -17,6 +17,14 @@ export class BaseballPlayerService {
                .catch(this.handleError);
   }
 
+  getBaseballPlayer(player_id: number): Promise<BaseballPlayer> {
+    const url = `${this.baseballPlayersUrl}/${player_id}`;
+    return this.http.get(url)
+               .toPromise()
+               .then(response => response.json().baseball_player as BaseballPlayer)
+               .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);

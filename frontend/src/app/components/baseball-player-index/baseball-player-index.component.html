@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <tr class="baseball-players" *ngFor="let player of baseballPlayers; let idx = index; let odd = odd;"
-      [ngClass] = "odd ? 'color-blue' : 'color-lightgreen'" (click)="openModalWithComponent(player.id)">
+      [ngClass] = "odd ? 'color-blue' : 'color-lightgreen'" (click)="openModalWithShowComponent(player.id)">
       <td>{{player.id}}</td>
       <td>{{player.name}}</td>
       <td>{{player.team}}</td>
