@@ -368,8 +368,8 @@ module.exports = {
       "name": "scripts",
       "fileName": "[name].bundle.js",
       "filesToConcat": [
-        "/home/sokamur/Development/rails5_angular4_sample/frontend/node_modules/jquery/dist/jquery.min.js",
-        "/home/sokamur/Development/rails5_angular4_sample/frontend/node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "./node_modules/jquery/dist/jquery.min.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.min.js"
       ]
     }),
     new InsertConcatAssetsWebpackPlugin([
