@@ -8,15 +8,18 @@ import { Ng2BootstrapModule } from 'ngx-bootstrap';
 import { BaseballPlayerIndexComponent } from './components/baseball-player-index/baseball-player-index.component';
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
+import { BaseballPlayerEditComponent } from './components/baseball-player-edit/baseball-player-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BaseballPlayerIndexComponent,
-    BaseballPlayerShowComponent
+    BaseballPlayerShowComponent,
+    BaseballPlayerEditComponent
   ],
   entryComponents: [
     BaseballPlayerShowComponent,
+    BaseballPlayerEditComponent
    ],
   imports: [
     BrowserModule,

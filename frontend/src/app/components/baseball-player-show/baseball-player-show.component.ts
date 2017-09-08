@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { BaseballPlayer } from '../../models/baseball-player';
+import { BaseballPlayerEditComponent }  from '../baseball-player-edit/baseball-player-edit.component';
 
 @Component({
   selector: 'app-baseball-player-show',
@@ -15,9 +16,17 @@ export class BaseballPlayerShowComponent implements OnInit {
 
   constructor(
     public bsModalRef: BsModalRef,
+    public bsModalRef2: BsModalRef,
+    private modalService: BsModalService
   ) { }
 
   ngOnInit() {
+  }
+
+  public openModalWithEditComponent(): void {
+    this.bsModalRef2 = this.modalService.show(BaseballPlayerEditComponent);
+    this.bsModalRef2.content.title = '野球選手編集';
+    this.bsModalRef2.content.player = this.player;
   }
 
 }

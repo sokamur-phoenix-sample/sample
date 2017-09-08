@@ -20,7 +20,11 @@ export class BaseballPlayerIndexComponent implements OnInit {
     private baseballPlayerService: BaseballPlayerService,
     private router: Router,
     private modalService: BsModalService
-  ) { }
+  ) {
+    baseballPlayerService.missionAnnounced$.subscribe(
+      message => { this.getBaseballPlayers(); }
+    );
+  }
 
   getBaseballPlayers(): void {
     this.baseballPlayerService

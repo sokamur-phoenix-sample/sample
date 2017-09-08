@@ -1,5 +1,6 @@
 class Api::V1::BaseballPlayersController < Api::V1::BaseController
   before_action :set_baseball_player, only: [:show, :update]
+  skip_before_action :verify_authenticity_token, only: [:update]
 
   def index
     @baseball_players = BaseballPlayer.all.order(:id)
@@ -9,6 +10,8 @@ class Api::V1::BaseballPlayersController < Api::V1::BaseController
   end
 
   def update
+    @baseball_player.update!(baseball_player_params)
+    render plain: {success: 'Updated'}.to_json, status: 200, content_type: 'application/json'
   end
 
   private
