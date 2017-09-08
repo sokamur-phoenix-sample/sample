@@ -1,0 +1,22 @@
+.color-blue {
+  background-color: #d9edf7;
+}
+.color-lightgreen {
+  background-color: #dff0d8;
+}
+.baseball-players:hover {
+  cursor: pointer;
+  color: #607D8B;
+  background-color: #DDD;
+}
+.baseball-players-header {
+  background-color: #0000ff;
+  color: #FFFFCC;
+}
+.baseball-players-position {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  margin-top: 100px;
+}

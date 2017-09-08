@@ -3,7 +3,7 @@ class CreateBaseballPlayers < ActiveRecord::Migration[5.1]
     create_table :baseball_players do |t|
       t.string :name
       t.string :team
-      t.string :positon
+      t.string :position
       t.string :hometown
 
       t.timestamps

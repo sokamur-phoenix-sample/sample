@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170908065306) do
   create_table "baseball_players", force: :cascade do |t|
     t.string "name"
     t.string "team"
-    t.string "positon"
+    t.string "position"
     t.string "hometown"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
