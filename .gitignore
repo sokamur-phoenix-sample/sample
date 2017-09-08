@@ -23,5 +23,5 @@
 .byebug_history
 /vendor/bundle
 /public/assets
-/node_modules
+/frontend/node_modules
 /npm-debug.log
