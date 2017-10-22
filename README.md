@@ -1,11 +1,11 @@
 # README
 
 * **Server Side: Rails v5.1.3**
-* **Front End: Angular v4.4.0-RC.0**
+* **Front End: Angular v5.1.1**
 * **Database: SQLite3**
 
 * **【開発環境の準備】**  
-`$ git clone git@github.com:sokamur-phoenix-sample/sample.git`   
+`$ git clone https://github.com/sokamur-phoenix-sample/sample.git`   
 `$ cd sample`   
 `$ bundle install --path vendor/bundle`  
 `$ bundle exec rails db:migrate`  

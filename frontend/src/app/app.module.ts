@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Ng2BootstrapModule } from 'ngx-bootstrap';
+import { ModalModule } from 'ngx-bootstrap';
 import { BaseballPlayerIndexComponent } from './components/baseball-player-index/baseball-player-index.component';
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
@@ -26,7 +26,7 @@ import { BaseballPlayerEditComponent } from './components/baseball-player-edit/b
     AppRoutingModule,
     HttpModule,
     FormsModule,
-    Ng2BootstrapModule.forRoot()
+    ModalModule.forRoot()
   ],
   providers: [BaseballPlayerService],
   bootstrap: [AppComponent]

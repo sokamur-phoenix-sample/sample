@@ -29,4 +29,8 @@ test:
 
   post:
     # add an extra test type
+    - echo "2nd Time"
+    - bundle exec rspec spec:
+        environment:
+          MODE: test
 
