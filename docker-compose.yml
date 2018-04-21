@@ -1,0 +1,34 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    working_dir: /home/node/frontend
+    volumes:
+      - ./frontend:/home/node/frontend
+      - /home/node/frontend/node_modules
+    environment:
+      TZ: 'Asia/Tokyo'
+      NODE_ENV: development
+    command: npm run webpack-dev-server
+    ports:
+      - "4200:4200"
+  web:
+    build: .
+    volumes:
+      - .:/webapp
+    environment:
+      TZ: 'Asia/Tokyo'
+      RAILS_ENV: development
+      DATABASE_NAME: db/development.sqlite3
+      DATABASE_NAME_TEST: db/test.sqlite3
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    ports:
+      - "3000:3000"
+    depends_on:
+      - frontend
+    tty: true
+    stdin_open: true
+    dns:
+      - 8.8.8.8
+
