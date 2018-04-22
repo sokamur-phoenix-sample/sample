@@ -10,6 +10,8 @@
 `$ docker-compose up -d --build`  
 `$ docker-compose run --rm --no-deps web bundle exec rails db:migrate`  
 `$ docker-compose run --rm --no-deps web bundle exec rails db:seed`  
+* URL
+<http://localhost:3000>
 
 **【Docke以外の開発環境準備（Local/VirtualBox etc...）】**  
 `$ git clone https://github.com/sokamur-phoenix-sample/sample.git`  

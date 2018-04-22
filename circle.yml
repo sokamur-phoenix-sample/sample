@@ -1,26 +1,18 @@
-## Customize the test machine
 machine:
   timezone:
     Asia/Tokyo
-  # Version of ruby to use
   ruby:
     version:
-      2.4.1
+      2.5.1
 
-## Customize dependencies
 dependencies:
   override:
-    - bundle install --path vendor/bundle: # note ':' here
-        timeout: 300 # fail if command has no output for 3 minutes
+    - bundle install --path vendor/bundle:
+        timeout: 300
 
-## Customize database setup
 database:
   override:
-    # replace CircleCI's generated database.yml
-    # - cp config/database.yml.ci config/database.yml
-    #   bundle exec rake db:create db:schema:load
 
-## Customize test commands
 test:
   override:
     - bundle exec rspec spec:
@@ -28,9 +20,7 @@ test:
           RAILS_ENV: test
 
   post:
-    # add an extra test type
     - echo "2nd Time"
     - bundle exec rspec spec:
         environment:
           MODE: test
-
