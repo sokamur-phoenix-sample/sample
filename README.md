@@ -6,6 +6,7 @@
 
 ### 開発環境の準備
 **【Docker開発環境】**  
+`$ git clone https://github.com/sokamur-phoenix-sample/sample.git`  
 `$ cd sample`  
 `$ docker-compose up -d --build`  
 `$ docker-compose run --rm --no-deps web bundle exec rails db:migrate`  
@@ -13,7 +14,7 @@
 * URL
 <http://localhost:3000>
 
-**【Docke以外の開発環境準備（Local/VirtualBox etc...）】**  
+**【Docker以外の開発環境準備（Local/VirtualBox etc...）】**  
 `$ git clone https://github.com/sokamur-phoenix-sample/sample.git`  
 `$ cd sample`  
 `$ bundle install --path vendor/bundle`  
