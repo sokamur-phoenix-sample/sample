@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    working_directory: /app
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          RAILS_ENV: test
+          DB_HOST: 127.0.0.1
+          TZ: /usr/share/zoneinfo/Asia/Tokyo
+          CIRCLE_TEST_REPORTS: /tmp/test-results
+    steps:
+      - checkout
+      - run: apt-get update -qq && apt-get install -y build-essential nodejs
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: bundle-{{ checksum "Gemfile" }}
+          paths: vendor/bundle
+      - run: RAILS_ENV=test bundle exec rails db:create db:schema:load
+      - run:
+          command: bundle exec rubocop
+      - run:
+          name: RSpec
+          command: bundle exec rspec
+      - store_test_results:
+          path: /tmp/test-results
