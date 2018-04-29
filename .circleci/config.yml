@@ -17,8 +17,8 @@ jobs:
           key: bundle-{{ checksum "Gemfile" }}
           paths: vendor/bundle
       - run: RAILS_ENV=test bundle exec rails db:create db:schema:load
-#      - run:
-#          command: bundle exec rubocop
+      - run:
+          command: bundle exec rubocop
       - run:
           name: RSpec
           command: bundle exec rspec
