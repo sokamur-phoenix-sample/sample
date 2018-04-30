@@ -11,7 +11,8 @@ class Api::V1::BaseballPlayersController < Api::V1::BaseController
 
   def update
     @baseball_player.update!(baseball_player_params)
-    render plain: {success: 'Updated'}.to_json, status: 200, content_type: 'application/json'
+    render plain: { success: 'Updated' }.to_json, status: ok,
+           content_type: 'application/json'
   end
 
   private
@@ -20,11 +21,11 @@ class Api::V1::BaseballPlayersController < Api::V1::BaseController
     @baseball_player = BaseballPlayer.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
   def baseball_player_params
     params.require(:baseball_player).permit(
       :name, :team, :positon, :hometown
     )
   end
-
 end
