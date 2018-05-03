@@ -24,3 +24,29 @@ jobs:
           command: bundle exec rspec
       - store_test_results:
           path: /tmp/test-results
+  bundle_update:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+    steps:
+      - checkout
+      - run:
+          name : bundle update
+          command: |
+            gem update bundler -N
+            gem install circleci-bundle-update-pr -N
+            circleci-bundle-update-pr ${BUNDLE_UPDATE_GITHUB_USERNAME} ${BUNDLE_UPDATE_GITHUB_EMAIL}
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+  circleci_bundle_update_pr:
+    triggers:
+      - schedule:
+          cron: "40 7 * * 1-7" # –ˆ“ú16:30
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - bundle_update
