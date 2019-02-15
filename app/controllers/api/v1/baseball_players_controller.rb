@@ -11,8 +11,7 @@ class Api::V1::BaseballPlayersController < Api::V1::BaseController
 
   def update
     @baseball_player.update!(baseball_player_params)
-    render plain: { success: 'Updated' }.to_json, status: ok,
-           content_type: 'application/json'
+    render plain: { success: 'Updated' }.to_json
   end
 
   private
