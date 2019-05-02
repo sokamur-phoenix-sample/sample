@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
-import { Subject } from 'rxjs/Subject';
+
+import { Subject } from 'rxjs';
 import * as $ from 'jquery';
 import { BaseballPlayer } from '../models/baseball-player';
 
