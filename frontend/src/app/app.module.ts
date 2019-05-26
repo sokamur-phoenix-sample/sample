@@ -9,13 +9,15 @@ import { BaseballPlayerIndexComponent } from './components/baseball-player-index
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
 import { BaseballPlayerEditComponent } from './components/baseball-player-edit/baseball-player-edit.component';
+import { ScheduleCalendarComponent } from './components/schedule-calendar/schedule-calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BaseballPlayerIndexComponent,
     BaseballPlayerShowComponent,
-    BaseballPlayerEditComponent
+    BaseballPlayerEditComponent,
+    ScheduleCalendarComponent
   ],
   entryComponents: [
     BaseballPlayerShowComponent,
