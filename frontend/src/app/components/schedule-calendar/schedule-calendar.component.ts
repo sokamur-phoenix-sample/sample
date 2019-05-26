@@ -11,9 +11,10 @@ import * as moment from 'moment';
 })
 export class ScheduleCalendarComponent implements AfterViewInit {
 
+  private calendarElement: any;
+
   constructor(
     private elementRef: ElementRef,
-    private calendarElement: any,
   ) { }
 
   ngAfterViewInit() {
