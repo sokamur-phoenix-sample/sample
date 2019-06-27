@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Subject } from 'rxjs';
 import * as $ from 'jquery';
@@ -8,12 +8,12 @@ import { BaseballPlayer } from '../models/baseball-player';
 @Injectable()
 
 export class BaseballPlayerService {
-  private headers = new Headers({'Content-Type': 'application/json'});
+  private headers = new HttpHeaders({'Content-Type': 'application/json'});
   private baseballPlayersUrl = 'api/v1/baseball_players';
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   private missionAnnouncedSource = new Subject<string>();
- 
+
   missionAnnounced$ = this.missionAnnouncedSource.asObservable();
 
   announceMission(mission: string) {
@@ -23,7 +23,7 @@ export class BaseballPlayerService {
   getBaseballPlayers(): Promise<BaseballPlayer[]> {
     return this.http.get(this.baseballPlayersUrl)
                .toPromise()
-               .then(response => response.json().baseball_players as BaseballPlayer[])
+               .then((response: any) => response.baseball_players as BaseballPlayer[] )
                .catch(this.handleError);
   }
 
@@ -31,17 +31,17 @@ export class BaseballPlayerService {
     const url = `${this.baseballPlayersUrl}/${player_id}`;
     return this.http.get(url)
                .toPromise()
-               .then(response => response.json().baseball_player as BaseballPlayer)
+               .then((response: any) => response.baseball_player as BaseballPlayer)
                .catch(this.handleError);
   }
 
   update(player: BaseballPlayer): Promise<BaseballPlayer> {
     const url = `${this.baseballPlayersUrl}/${player.id}`;
-    let headers = new Headers({ 'Content-Type': 'application/json', 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')});
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')});
     return this.http
                .put(url, JSON.stringify(player), {headers: headers})
                .toPromise()
-               .then(() => player)
+               .then((any) => player)
                .catch(this.handleError);
   }
 
@@ -49,5 +49,4 @@ export class BaseballPlayerService {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
-
 }
