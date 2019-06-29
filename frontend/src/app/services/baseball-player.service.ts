@@ -41,7 +41,7 @@ export class BaseballPlayerService {
     return this.http
                .put(url, JSON.stringify(player), {headers: headers})
                .toPromise()
-               .then((any) => player)
+               .then(() => player)
                .catch(this.handleError);
   }
 
