@@ -8,7 +8,6 @@ import { BaseballPlayer } from '../models/baseball-player';
 @Injectable()
 
 export class BaseballPlayerService {
-  private headers = new HttpHeaders({'Content-Type': 'application/json'});
   private baseballPlayersUrl = 'api/v1/baseball_players';
   constructor(private http: HttpClient) { }
 
@@ -35,13 +34,13 @@ export class BaseballPlayerService {
                .catch(this.handleError);
   }
 
-  update(player: BaseballPlayer): Promise<BaseballPlayer> {
+  update(player: BaseballPlayer): Promise<any> {
     const url = `${this.baseballPlayersUrl}/${player.id}`;
-    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')});
+    let headers = new HttpHeaders({'Content-Type': 'application/json'});
     return this.http
                .put(url, JSON.stringify(player), {headers: headers})
                .toPromise()
-               .then(() => player)
+               .then((response: any) => player)
                .catch(this.handleError);
   }
 
