@@ -5,7 +5,9 @@ import { Subject } from 'rxjs';
 import * as $ from 'jquery';
 import { BaseballPlayer } from '../models/baseball-player';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 
 export class BaseballPlayerService {
   private baseballPlayersUrl = 'api/v1/baseball_players';

@@ -30,7 +30,7 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
     FormsModule,
     ModalModule.forRoot()
   ],
-  providers: [BaseballPlayerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
