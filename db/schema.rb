@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908065306) do
+ActiveRecord::Schema.define(version: 20190706144103) do
 
   create_table "baseball_players", force: :cascade do |t|
     t.string "name"
     t.string "team"
     t.string "position"
     t.string "hometown"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "title"
+    t.boolean "all_day"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "background_color"
+    t.string "border_color"
+    t.string "text_color"
+    t.integer "user_id"
+    t.integer "contractor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
