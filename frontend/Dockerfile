@@ -1,4 +1,4 @@
-FROM node:9
+FROM node:10.16-alpine
 
 RUN npm install -g @angular/cli
 
