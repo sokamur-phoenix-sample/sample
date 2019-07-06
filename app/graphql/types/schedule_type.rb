@@ -10,5 +10,14 @@ module Types
     field :text_color, String, null: true
     field :user_id, Int, null: true
     field :contractor_id, Int, null: true
+    field :test, String, null: true
+
+    def start
+      object.start.to_s.slice(0, 19)
+    end
+
+    def end
+      object.end.to_s.slice(0, 19)
+    end
   end
 end
