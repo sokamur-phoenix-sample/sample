@@ -4,6 +4,14 @@ import * as $ from 'jquery';
 import 'fullcalendar';
 import * as moment from 'moment';
 
+import { Schedule } from '../../models/schedule';
+import { ScheduleService } from '../../services/schedule.service';
+
+import { Observable } from 'rxjs';
+import { Apollo } from 'apollo-angular';
+import { map } from 'rxjs/operators';
+import gql from 'graphql-tag';
+
 @Component({
   selector: 'app-schedule-calendar',
   templateUrl: './schedule-calendar.component.html',
@@ -12,9 +20,16 @@ import * as moment from 'moment';
 export class ScheduleCalendarComponent implements AfterViewInit {
 
   private calendarElement: any;
+  private schedules: Array<Object>
+
+  getSchedules(): void {
+    this.scheduleService.getSchedules()
+        .subscribe((response: any) => this.schedules = response);
+  }
 
   constructor(
     private elementRef: ElementRef,
+    private scheduleService: ScheduleService
   ) { }
 
   ngAfterViewInit() {

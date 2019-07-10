@@ -37,6 +37,6 @@ export class ScheduleService {
       .watchQuery<any>({
         query: GET_SCHEDULES,
       })
-      .valueChanges.pipe(map(result => result.data && result.data.courses.edges.map(edge => edge.node)));
+      .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
   }
 }
