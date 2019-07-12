@@ -22,9 +22,9 @@ export class ScheduleCalendarComponent implements AfterViewInit {
   private calendarElement: any;
   private schedules: Array<Object>
 
-  getSchedules(): void {
+  getSchedules() {
     this.scheduleService.getSchedules()
-        .subscribe((response: any) => this.schedules = response);
+        .subscribe((response: any) => response);
   }
 
   constructor(
@@ -66,7 +66,7 @@ export class ScheduleCalendarComponent implements AfterViewInit {
         $('#calendar').fullCalendar('unselect');
       },
       editable: true,
-      eventSources: [],
+      eventSources: this.getSchedules(),
       buttonText: {
         today: '今日'
       },
