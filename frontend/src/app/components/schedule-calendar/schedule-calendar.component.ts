@@ -38,7 +38,7 @@ const GET_SCHEDULES = gql`
 export class ScheduleCalendarComponent implements AfterViewInit {
 
   private calendarElement: any;
-  private schedules: Schedule[];
+  private schedules: Observable<any>;
 
   // getSchedules() {
   //   this.scheduleService.getSchedules()
