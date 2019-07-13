@@ -1,16 +1,34 @@
-import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 
 import * as $ from 'jquery';
 import 'fullcalendar';
 import * as moment from 'moment';
 
 import { Schedule } from '../../models/schedule';
-import { ScheduleService } from '../../services/schedule.service';
+//import { ScheduleService } from '../../services/schedule.service';
 
 import { Observable } from 'rxjs';
-import { Apollo } from 'apollo-angular';
 import { map } from 'rxjs/operators';
+import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+
+const GET_SCHEDULES = gql`
+  {
+    schedules {
+      edges {
+        node {
+          title
+          allDay
+          start
+          end
+          backgroundColor
+          borderColor
+          textColor
+        }
+      }
+    }
+  }
+`;
 
 @Component({
   selector: 'app-schedule-calendar',
@@ -20,20 +38,28 @@ import gql from 'graphql-tag';
 export class ScheduleCalendarComponent implements AfterViewInit {
 
   private calendarElement: any;
-  private schedules: Array<Object>
+  private schedules: Schedule[];
 
-  getSchedules() {
-    this.scheduleService.getSchedules()
-        .subscribe((response: any) => response);
-  }
+  // getSchedules() {
+  //   this.scheduleService.getSchedules()
+  //     .subscribe((response: any) => this.schedules = response);
+  // }
 
   constructor(
     private elementRef: ElementRef,
-    private scheduleService: ScheduleService
-  ) { }
+    // private scheduleService: ScheduleService
+    private apollo: Apollo
+    ) { }
+
+  ngOnInit(): void {
+    this.schedules = this.apollo
+      .watchQuery<any>({
+        query: GET_SCHEDULES,
+      })
+      .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
+  }
 
   ngAfterViewInit() {
-    var self = this;
     this.calendarElement = $(this.elementRef.nativeElement);
     this.calendarElement.fullCalendar({
       height: 530,
@@ -66,7 +92,7 @@ export class ScheduleCalendarComponent implements AfterViewInit {
         $('#calendar').fullCalendar('unselect');
       },
       editable: true,
-      eventSources: this.getSchedules(),
+      eventSources: this.schedules,
       buttonText: {
         today: '今日'
       },
