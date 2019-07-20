@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from 'ngx-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatIconModule, MatCheckboxModule } from '@angular/material';
 import { BaseballPlayerIndexComponent } from './components/baseball-player-index/baseball-player-index.component';
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
@@ -28,11 +30,15 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
    ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
     FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
     ModalModule.forRoot()
   ],
   providers: [],
