@@ -1,23 +1,26 @@
 <div class="baseball-players-position">
-<table border="1px" bordercolor="#0000ff">
-  <thead class="baseball-players-header">
-    <tr>
-      <th width="20px">ID</th>
-      <th width="100px">選手名</th>
-      <th width="250px">所属チーム</th>
-      <th width="100px">ポジション</th>
-      <th width="100px">出身地</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="baseball-players" *ngFor="let player of baseballPlayers; let idx = index; let odd = odd;"
-      [ngClass] = "odd ? 'color-blue' : 'color-lightgreen'" (click)="openModalWithShowComponent(player.id)">
-      <td>{{player.id}}</td>
-      <td>{{player.name}}</td>
-      <td>{{player.team}}</td>
-      <td>{{player.position}}</td>
-      <td>{{player.hometown}}</td>
-    </tr>
-  </tbody>
-</table>
+  <mat-table #table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> 選手名 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="team">
+      <mat-header-cell *matHeaderCellDef> 所属チーム </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.team}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> ポジション </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="hometown">
+      <mat-header-cell *matHeaderCellDef> 出身地 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.hometown}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
 </div>

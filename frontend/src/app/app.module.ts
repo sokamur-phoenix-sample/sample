@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from 'ngx-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatIconModule, MatCheckboxModule } from '@angular/material';
+import { MatTableModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatMenuModule, MatListModule, MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { BaseballPlayerIndexComponent } from './components/baseball-player-index/baseball-player-index.component';
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
@@ -28,7 +28,7 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
     BaseballPlayerShowComponent,
     BaseballPlayerEditComponent
    ],
-  imports: [
+   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -36,8 +36,13 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
     ApolloModule,
     HttpLinkModule,
     FormsModule,
-    MatButtonModule,
+    MatTableModule,
+    MatToolbarModule,
     MatIconModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
+    MatButtonModule,
     MatCheckboxModule,
     ModalModule.forRoot()
   ],

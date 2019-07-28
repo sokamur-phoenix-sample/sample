@@ -13,7 +13,8 @@ import { BaseballPlayerShowComponent }  from '../baseball-player-show/baseball-p
 })
 export class BaseballPlayerIndexComponent implements OnInit {
 
-  baseballPlayers: BaseballPlayer[];
+  dataSource: BaseballPlayer[];
+  displayedColumns = ['id', 'name', 'team', 'position', 'hometown'];
   bsModalRef: BsModalRef;
 
   constructor(
@@ -29,7 +30,7 @@ export class BaseballPlayerIndexComponent implements OnInit {
   getBaseballPlayers(): void {
     this.baseballPlayerService
         .getBaseballPlayers()
-        .then(response => this.baseballPlayers = response);
+        .then(response => this.dataSource = response);
   }
 
   ngOnInit(): void {
