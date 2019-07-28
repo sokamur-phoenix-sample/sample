@@ -4,11 +4,6 @@
 .color-lightgreen {
   background-color: #dff0d8;
 }
-.baseball-players:hover {
-  cursor: pointer;
-  color: #607D8B;
-  background-color: #DDD;
-}
 .baseball-players-header {
   background-color: #0000ff;
   color: #FFFFCC;
@@ -20,4 +15,9 @@
   transform : translate(-50%,-50%);
   margin-top: 160px;
   width: 90%;
+}
+.mat-row:hover {
+  cursor: pointer;
+  color: #607D8B;
+  background-color: #DDD;
 }
