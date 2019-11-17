@@ -7,6 +7,7 @@
 ```
 $ ng version
 
+
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
    / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
@@ -15,33 +16,34 @@ $ ng version
                 |___/
 
 
-Angular CLI: 8.1.0
+Angular CLI: 8.3.19
 Node: 10.16.0
 OS: linux x64
-Angular: 8.1.0
-... animations, cli, common, compiler, compiler-cli, core, forms
+Angular: 8.2.14
+... animations, common, compiler, compiler-cli, core, forms
 ... platform-browser, platform-browser-dynamic, platform-server
 ... router
 
 Package                           Version
 -----------------------------------------------------------
-@angular-devkit/architect         0.801.0
-@angular-devkit/build-angular     0.801.0
-@angular-devkit/build-optimizer   0.801.0
-@angular-devkit/build-webpack     0.801.0
-@angular-devkit/core              8.1.0
-@angular-devkit/schematics        8.1.0
-@angular/cdk                      8.0.2
-@angular/flex-layout              8.0.0-beta.26
+@angular-devkit/architect         0.803.19
+@angular-devkit/build-angular     0.803.19
+@angular-devkit/build-optimizer   0.803.19
+@angular-devkit/build-webpack     0.803.19
+@angular-devkit/core              8.3.19
+@angular-devkit/schematics        8.3.19
+@angular/cdk                      8.2.3
+@angular/cli                      8.3.19
+@angular/flex-layout              8.0.0-beta.27
 @angular/http                     7.2.15
 @angular/language-service         7.2.15
-@angular/material                 8.0.2
-@ngtools/webpack                  8.1.0
-@schematics/angular               8.1.0
-@schematics/update                0.801.0
-rxjs                              6.5.2
+@angular/material                 8.2.3
+@ngtools/webpack                  8.3.19
+@schematics/angular               8.3.19
+@schematics/update                0.803.19
+rxjs                              6.5.3
 typescript                        3.4.5
-webpack                           4.35.2
+webpack                           4.41.2
 ```
 
 ### 開発環境の準備
