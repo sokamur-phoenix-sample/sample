@@ -16,8 +16,8 @@ $ ng version
                 |___/
 
 
-Angular CLI: 8.3.19
-Node: 10.16.0
+Angular CLI: 8.3.21
+Node: 10.16.3
 OS: linux x64
 Angular: 8.2.14
 ... animations, common, compiler, compiler-cli, core, forms
@@ -26,24 +26,24 @@ Angular: 8.2.14
 
 Package                           Version
 -----------------------------------------------------------
-@angular-devkit/architect         0.803.19
-@angular-devkit/build-angular     0.803.19
-@angular-devkit/build-optimizer   0.803.19
-@angular-devkit/build-webpack     0.803.19
-@angular-devkit/core              8.3.19
-@angular-devkit/schematics        8.3.19
+@angular-devkit/architect         0.803.21
+@angular-devkit/build-angular     0.803.21
+@angular-devkit/build-optimizer   0.803.21
+@angular-devkit/build-webpack     0.803.21
+@angular-devkit/core              8.3.21
+@angular-devkit/schematics        8.3.21
 @angular/cdk                      8.2.3
-@angular/cli                      8.3.19
+@angular/cli                      8.3.21
 @angular/flex-layout              8.0.0-beta.27
 @angular/http                     7.2.15
 @angular/language-service         7.2.15
 @angular/material                 8.2.3
-@ngtools/webpack                  8.3.19
-@schematics/angular               8.3.19
-@schematics/update                0.803.19
+@ngtools/webpack                  8.3.21
+@schematics/angular               8.3.21
+@schematics/update                0.803.21
 rxjs                              6.5.3
 typescript                        3.4.5
-webpack                           4.41.2
+webpack                           4.41.4
 ```
 
 ### 開発環境の準備
