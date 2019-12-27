@@ -48,7 +48,7 @@ Style/StringLiterals:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
-Layout/AlignHash:
+Layout/HashAlignment:
   Enabled: false
 
 IfUnlessModifier:
@@ -60,7 +60,7 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Enabled: false
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Enabled: false
 
 Rails/HttpStatus:
