@@ -34,8 +34,8 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
   entryComponents: [
     BaseballPlayerShowComponent,
     BaseballPlayerEditComponent
-   ],
-   imports: [
+  ],
+  imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -62,7 +62,7 @@ export class AppModule {
     httpLink: HttpLink
   ) {
     apollo.create({
-      link: httpLink.create({uri: 'http://192.168.99.102:3000/graphql'}),
+      link: httpLink.create({uri: 'http://192.168.56.101:3000/graphql'}),
       cache: new InMemoryCache()
     });
   }
