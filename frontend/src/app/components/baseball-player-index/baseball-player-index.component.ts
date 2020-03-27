@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalRef } from 'ngx-bootstrap';
 import { BaseballPlayer } from '../../models/baseball-player';
 import { BaseballPlayerService } from '../../services/baseball-player.service';
 import { BaseballPlayerShowComponent }  from '../baseball-player-show/baseball-player-show.component';

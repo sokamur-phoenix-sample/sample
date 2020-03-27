@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalRef } from 'ngx-bootstrap';
 import { BaseballPlayer } from '../../models/baseball-player';
 import { BaseballPlayerService } from '../../services/baseball-player.service';
 
