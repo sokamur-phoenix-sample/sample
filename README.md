@@ -69,7 +69,8 @@ $ npm install
 * Angular 起動  
 $ cd sample/frontend  
 $ npm run start  
-※VM等に環境構築している場合は、4200ポートをフォワードしてください。  
+※VM等に環境構築している場合は、3000/4200ポートをフォワードしてください。 
+$ ssh -L 3000:localhost:3000 user_name@Dev-Host(開発環境ホスト)  
 $ ssh -L 4200:localhost:4200 user_name@Dev-Host(開発環境ホスト)  
 
 * Rails 起動  
