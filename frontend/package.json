@@ -40,7 +40,7 @@
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "jquery": "^3.4.1",
-    "ngx-bootstrap": "^5.5.0",
+    "ngx-bootstrap": "^5.6.1",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "ts-loader": "^2.3.6",
