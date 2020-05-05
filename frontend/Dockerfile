@@ -1,6 +1,4 @@
-FROM node:10.16-alpine
-
-RUN npm install -g @angular/cli
+FROM node:12-alpine
 
 ENV APP_HOME=/home/node/frontend
 ENV PATH=$PATH:/home/node/frontend/node_modules/.bin
