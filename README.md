@@ -15,32 +15,33 @@ $ ng version
                 |___/
 
 
-Angular CLI: 9.0.7
-Node: 12.16.1
+Angular CLI: 10.0.3
+Node: 12.14.1
 OS: linux x64
 
-Angular: 9.0.7
-... animations, cli, common, compiler, compiler-cli, core, forms
+Angular: 10.0.4
+... animations, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
 Ivy Workspace: Yes
 
 Package                           Version
 -----------------------------------------------------------
-@angular-devkit/architect         0.900.7
-@angular-devkit/build-angular     0.900.7
-@angular-devkit/build-optimizer   0.900.7
-@angular-devkit/build-webpack     0.900.7
-@angular-devkit/core              9.0.7
-@angular-devkit/schematics        9.0.7
-@angular/cdk                      9.1.3
+@angular-devkit/architect         0.1000.3
+@angular-devkit/build-angular     0.1000.3
+@angular-devkit/build-optimizer   0.1000.3
+@angular-devkit/build-webpack     0.1000.3
+@angular-devkit/core              10.0.3
+@angular-devkit/schematics        10.0.3
+@angular/cdk                      10.1.0
+@angular/cli                      10.0.3
 @angular/flex-layout              9.0.0-beta.29
-@angular/material                 9.1.3
-@ngtools/webpack                  9.0.7
-@schematics/angular               9.0.7
-@schematics/update                0.900.7
+@angular/material                 10.1.0
+@ngtools/webpack                  10.0.3
+@schematics/angular               10.0.3
+@schematics/update                0.1000.3
 rxjs                              6.5.3
-typescript                        3.7.5
+typescript                        3.9.7
 webpack                           4.41.4
 ```
 
