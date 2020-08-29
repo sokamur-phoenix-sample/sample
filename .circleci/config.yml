@@ -4,7 +4,7 @@ jobs:
     parallelism: 1
     working_directory: ~/app
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.6.5-node-browsers
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -26,7 +26,7 @@ jobs:
           path: /tmp/test-results
   bundle_update:
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.6.5-node-browsers
     steps:
       - checkout
       - run:
@@ -43,7 +43,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "30 8 * * 4"
+          cron: "30 23 * * 6"
           filters:
             branches:
               only:
