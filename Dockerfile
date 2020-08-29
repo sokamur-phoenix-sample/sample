@@ -3,7 +3,7 @@ ENV LANG C.UTF-8
 
 RUN /bin/cp -f /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-RUN apt-get update -qq && apt-get install -y build-essential libmysql++-dev nodejs \
+RUN apt-get update -qq && apt-get install -y build-essential nodejs \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
