@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --public-host http://localhost:4200",
-    "build": "webpack",
+    "build": "ng build --watch=true --buildOptimizer=true --aot=true",
     "test": "karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "protractor ./protractor.conf.js",
