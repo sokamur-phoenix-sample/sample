@@ -25,7 +25,7 @@ services:
       DATABASE_NAME: db/development.sqlite3
       DATABASE_NAME_TEST: db/test.sqlite3
     command: >-
-      bash -c "bundle install &&
+      sh -c "bundle install &&
       bin/rails db:create db:migrate &&
       bin/rails s -p 3000 -b '0.0.0.0'"
     ports:
