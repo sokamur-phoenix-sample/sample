@@ -48,11 +48,11 @@ webpack                           4.41.4
 ### 開発環境の準備
 **【Docker開発環境】**  
 ```
-$ git clone https://github.com/sokamur-phoenix-sample/sample.git  
-$ cd sample  
-$ docker-compose up -d --build  
-$ docker-compose exec web bundle exec rails db:migrate  
-$ docker-compose exec web bundle exec rails db:seed  
+$ git clone https://github.com/sokamur-phoenix-sample/sample.git
+$ cd sample
+$ docker-compose up -d --build
+$ docker-compose exec app bundle exec rails db:migrate
+$ docker-compose exec app bundle exec rails db:seed
 * URL
 <http://localhost:3000>
 ```
@@ -60,16 +60,16 @@ $ docker-compose exec web bundle exec rails db:seed
 **【Docker以外の開発環境準備（Local/VirtualBox etc...）】**  
 ```
 $ git clone https://github.com/sokamur-phoenix-sample/sample.git  
-$ cd sample  
-$ bundle install --path vendor/bundle  
-$ bundle exec rails db:migrate  
-$ bundle exec rails db:seed  
-$ cd sample/frontend  
-$ npm install  
+$ cd sample
+$ bundle install --path vendor/bundle
+$ bundle exec rails db:migrate
+$ bundle exec rails db:seed
+$ cd sample/frontend
+$ npm install
 
 * Angular 起動  
-$ cd sample/frontend  
-$ npm run start  
+$ cd sample/frontend
+$ npm run start
 ※VM等に環境構築している場合は、3000/4200ポートをフォワードしてください。 
 $ ssh -L 3000:localhost:3000 user_name@Dev-Host(開発環境ホスト)  
 $ ssh -L 4200:localhost:4200 user_name@Dev-Host(開発環境ホスト)  
