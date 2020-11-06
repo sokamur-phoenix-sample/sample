@@ -16,8 +16,15 @@ jobs:
       - save_cache:
           key: bundle-{{ checksum "Gemfile" }}
           paths: vendor/bundle
-      - run: RAILS_ENV=test bundle exec rails db:create db:schema:load
       - run:
+          name: Waits for Angular
+          command: >-
+            bash -c "cd frontend && npm install && npm run test"
+      - run:
+          name: Create DB
+          command: RAILS_ENV=test bundle exec rails db:create db:schema:load
+      - run:
+          name: Rubocop
           command: bundle exec rubocop
       - run:
           name: RSpec
