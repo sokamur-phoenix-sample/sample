@@ -15,34 +15,31 @@ $ ng version
                 |___/
 
 
-Angular CLI: 10.0.3
+Angular CLI: 10.2.0
 Node: 12.14.1
 OS: linux x64
 
-Angular: 10.0.4
+Angular: 10.2.2
 ... animations, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
 Ivy Workspace: Yes
 
-Package                           Version
------------------------------------------------------------
-@angular-devkit/architect         0.1000.3
-@angular-devkit/build-angular     0.1000.3
-@angular-devkit/build-optimizer   0.1000.3
-@angular-devkit/build-webpack     0.1000.3
-@angular-devkit/core              10.0.3
-@angular-devkit/schematics        10.0.3
-@angular/cdk                      10.1.0
-@angular/cli                      10.0.3
-@angular/flex-layout              9.0.0-beta.29
-@angular/material                 10.1.0
-@ngtools/webpack                  10.0.3
-@schematics/angular               10.0.3
-@schematics/update                0.1000.3
-rxjs                              6.5.3
-typescript                        3.9.7
-webpack                           4.41.4
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1002.0
+@angular-devkit/build-angular   0.1002.0
+@angular-devkit/core            10.2.0
+@angular-devkit/schematics      10.2.0
+@angular/cdk                    10.2.7
+@angular/cli                    10.2.0
+@angular/flex-layout            9.0.0-beta.29
+@angular/material               10.2.7
+@schematics/angular             10.2.0
+@schematics/update              0.1002.0
+rxjs                            6.5.3
+typescript                      3.9.7
+webpack                         4.41.4
 ```
 
 ### 開発環境の準備
