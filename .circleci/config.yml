@@ -12,14 +12,18 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - checkout
-      - save_cache:
-          key: bundle-{{ checksum "Gemfile" }}
-          paths: vendor/bundle
+      - restore_cache:
+          keys:
+            - bundle-{{ checksum "Gemfile" }}
+            - bundle-
       - run:
           name: Install Ruby Dependencies
           command: >-
             bash -c "bundle config set --local path 'vendor/bundle' &&
             bundle install"
+      - save_cache:
+          key: bundle-{{ checksum "Gemfile" }}
+          paths: vendor/bundle
       - run:
           name: Waits for Angular
           command: >-
