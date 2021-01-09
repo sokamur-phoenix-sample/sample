@@ -1,10 +1,10 @@
-version: 2
+version: 2.1
 jobs:
   build:
     parallelism: 1
     working_directory: ~/app
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:3.0.0-buster-node-browsers
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -12,10 +12,14 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - checkout
-      - run: bundle install --path vendor/bundle
       - save_cache:
           key: bundle-{{ checksum "Gemfile" }}
           paths: vendor/bundle
+      - run:
+          name: Install Ruby Dependencies
+          command: >-
+            bash -c "bundle config set --local path 'vendor/bundle' &&
+            bundle install"
       - run:
           name: Waits for Angular
           command: >-
@@ -33,7 +37,7 @@ jobs:
           path: /tmp/test-results
   bundle_update:
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:3.0.0-buster-node-browsers
     steps:
       - checkout
       - run:
@@ -43,7 +47,7 @@ jobs:
             gem install circleci-bundle-update-pr -N
             circleci-bundle-update-pr ${BUNDLE_UPDATE_GITHUB_USERNAME} ${BUNDLE_UPDATE_GITHUB_EMAIL}
 workflows:
-  version: 2
+  version: 2.1
   build:
     jobs:
       - build
