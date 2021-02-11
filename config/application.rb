@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Rails5Angular4Sample
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    config.load_defaults 6.1
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -17,5 +17,7 @@ module Rails5Angular4Sample
     # the framework and any gems in your application.
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+
+    config.assets.enabled = false
   end
 end
