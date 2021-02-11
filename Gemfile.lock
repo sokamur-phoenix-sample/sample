@@ -230,7 +230,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.12)
   rack-cors
-  rails (~> 6.0)
+  rails (~> 6.1.1)
   rspec-rails
   rubocop-rails
   spring
@@ -243,4 +243,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.6
+   2.2.9
