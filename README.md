@@ -1,7 +1,7 @@
 # README
 
-* **Server Side: Rails v6.0.2.1**
-* **Front End: Angular v10.0.4**
+* **Server Side: Rails v6.1.3.1**
+* **Front End: Angular v11.2.8**
 * **Database: SQLite3**
 
 ```
@@ -15,11 +15,11 @@ $ ng version
                 |___/
 
 
-Angular CLI: 10.2.0
-Node: 12.14.1
+Angular CLI: 11.2.7
+Node: 12.22.0
 OS: linux x64
 
-Angular: 10.2.2
+Angular: 11.2.8
 ... animations, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
@@ -27,18 +27,18 @@ Ivy Workspace: Yes
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1002.0
-@angular-devkit/build-angular   0.1002.0
-@angular-devkit/core            10.2.0
-@angular-devkit/schematics      10.2.0
-@angular/cdk                    10.2.7
-@angular/cli                    10.2.0
+@angular-devkit/architect       0.1102.7
+@angular-devkit/build-angular   0.1102.7
+@angular-devkit/core            11.2.7
+@angular-devkit/schematics      11.2.7
+@angular/cdk                    11.2.7
+@angular/cli                    11.2.7
 @angular/flex-layout            9.0.0-beta.29
-@angular/material               10.2.7
-@schematics/angular             10.2.0
-@schematics/update              0.1002.0
+@angular/material               11.2.7
+@schematics/angular             11.2.7
+@schematics/update              0.1102.7
 rxjs                            6.5.3
-typescript                      3.9.7
+typescript                      4.1.5
 webpack                         4.41.4
 ```
 
