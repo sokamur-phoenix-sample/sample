@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 
 //import { Schedule } from '../../models/schedule';
 //import { ScheduleService } from '../../services/schedule.service';
+import { CalendarOptions } from '@fullcalendar/angular';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -31,7 +32,7 @@ const GET_SCHEDULES = gql`
   templateUrl: './schedule-calendar.component.html',
   styleUrls: ['./schedule-calendar.component.scss']
 })
-export class ScheduleCalendarComponent implements AfterViewInit {
+export class ScheduleCalendarComponent {
 
   private calendarElement: any;
   private schedules: Observable<any>;
@@ -45,17 +46,28 @@ export class ScheduleCalendarComponent implements AfterViewInit {
     private elementRef: ElementRef,
     // private scheduleService: ScheduleService
     private apollo: Apollo
-    ) { }
+  ) { }
 
-  ngOnInit(): void {
-    this.schedules = this.apollo
-      .watchQuery<any>({
-        query: GET_SCHEDULES,
-      })
-      .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
-  }
+  calendarOptions: CalendarOptions = {
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    },
+    initialView: 'dayGridMonth',
+    locale: 'ja',
+    themeSystem: 'bootstrap',
+  };
 
-  ngAfterViewInit() {
+  // ngOnInit(): void {
+  //   this.schedules = this.apollo
+  //     .watchQuery<any>({
+  //       query: GET_SCHEDULES,
+  //     })
+  //     .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
+  // }
+
+  // ngAfterViewInit() {
     // this.calendarElement = $(this.elementRef.nativeElement);
     // this.calendarElement.fullCalendar({
     //   height: 530,
@@ -93,5 +105,5 @@ export class ScheduleCalendarComponent implements AfterViewInit {
     //     today: '今日'
     //   },
     // });
-  }
+  //}
 }
