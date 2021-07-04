@@ -57,6 +57,16 @@ export class ScheduleCalendarComponent {
     initialView: 'dayGridMonth',
     locale: 'ja',
     themeSystem: 'bootstrap',
+    weekends: true,
+    navLinks: true,
+    slotDuration: '00:15:00',
+    slotLabelInterval: '00:30',
+    selectable: true,
+    editable: true,
+    allDayText: '終日',
+    buttonText: {
+      today: '今日'
+    }
   };
 
   // ngOnInit(): void {
