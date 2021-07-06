@@ -17,11 +17,23 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
 import { BaseballPlayerIndexComponent } from './components/baseball-player-index/baseball-player-index.component';
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
 import { BaseballPlayerEditComponent } from './components/baseball-player-edit/baseball-player-edit.component';
 import { ScheduleCalendarComponent } from './components/schedule-calendar/schedule-calendar.component';
+
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  timeGridPlugin,
+  listPlugin,
+  interactionPlugin
+]);
 
 @NgModule({
   declarations: [
@@ -51,6 +63,7 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
     MatListModule,
     MatButtonModule,
     MatCheckboxModule,
+    FullCalendarModule,
     ModalModule.forRoot()
   ],
   providers: [],
