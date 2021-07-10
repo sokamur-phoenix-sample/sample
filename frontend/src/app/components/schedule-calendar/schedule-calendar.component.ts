@@ -3,6 +3,7 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 //import { Schedule } from '../../models/schedule';
 //import { ScheduleService } from '../../services/schedule.service';
 import { CalendarOptions } from '@fullcalendar/angular';
+import { EventInput } from '@fullcalendar/core';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -37,6 +38,7 @@ export class ScheduleCalendarComponent {
   private calendarElement: any;
   private schedules: Observable<any>;
   calendarOptions: CalendarOptions;
+  calendarEvents: EventInput[] = [];
 
   // getSchedules() {
   //   this.scheduleService.getSchedules()
@@ -56,6 +58,7 @@ export class ScheduleCalendarComponent {
       })
       .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
 
+    this.schedules.forEach(event => this.calendarEvents.push(event));
     this.calendarOptions = {
       headerToolbar: {
         left: 'prev,next today',
@@ -74,7 +77,8 @@ export class ScheduleCalendarComponent {
       allDayText: '終日',
       buttonText: {
         today: '今日'
-      }
+      },
+      events: this.calendarEvents
     };
   }
 
