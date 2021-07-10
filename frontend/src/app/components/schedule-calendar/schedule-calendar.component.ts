@@ -36,6 +36,7 @@ export class ScheduleCalendarComponent {
 
   private calendarElement: any;
   private schedules: Observable<any>;
+  calendarOptions: CalendarOptions;
 
   // getSchedules() {
   //   this.scheduleService.getSchedules()
@@ -48,34 +49,34 @@ export class ScheduleCalendarComponent {
     private apollo: Apollo
   ) { }
 
-  calendarOptions: CalendarOptions = {
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-    },
-    initialView: 'dayGridMonth',
-    locale: 'ja',
-    themeSystem: 'bootstrap',
-    weekends: true,
-    navLinks: true,
-    slotDuration: '00:15:00',
-    slotLabelInterval: '00:30',
-    selectable: true,
-    editable: true,
-    allDayText: '終日',
-    buttonText: {
-      today: '今日'
-    }
-  };
+  ngOnInit(): void {
+    this.schedules = this.apollo
+      .watchQuery<any>({
+        query: GET_SCHEDULES,
+      })
+      .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
 
-  // ngOnInit(): void {
-  //   this.schedules = this.apollo
-  //     .watchQuery<any>({
-  //       query: GET_SCHEDULES,
-  //     })
-  //     .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
-  // }
+    this.calendarOptions = {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      initialView: 'dayGridMonth',
+      locale: 'ja',
+      themeSystem: 'bootstrap',
+      weekends: true,
+      navLinks: true,
+      slotDuration: '00:15:00',
+      slotLabelInterval: '00:30',
+      selectable: true,
+      editable: true,
+      allDayText: '終日',
+      buttonText: {
+        today: '今日'
+      }
+    };
+  }
 
   // ngAfterViewInit() {
     // this.calendarElement = $(this.elementRef.nativeElement);
