@@ -1,14 +1,12 @@
-import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
-import * as $ from 'jquery';
-import 'fullcalendar';
-import * as moment from 'moment';
-
-import { Schedule } from '../../models/schedule';
+//import { Schedule } from '../../models/schedule';
 //import { ScheduleService } from '../../services/schedule.service';
+import { CalendarOptions } from '@fullcalendar/angular';
+import { EventInput } from '@fullcalendar/core';
 
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+// import { Observable } from 'rxjs';
+// import { map } from 'rxjs/operators';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
@@ -35,10 +33,13 @@ const GET_SCHEDULES = gql`
   templateUrl: './schedule-calendar.component.html',
   styleUrls: ['./schedule-calendar.component.scss']
 })
-export class ScheduleCalendarComponent implements AfterViewInit {
+export class ScheduleCalendarComponent implements OnInit {
 
   private calendarElement: any;
-  private schedules: Observable<any>;
+  // private schedules: Observable<any>;
+  calendarOptions: CalendarOptions;
+  private calendarEvents: EventInput[] = [];
+  private loading: boolean;
 
   // getSchedules() {
   //   this.scheduleService.getSchedules()
@@ -49,53 +50,42 @@ export class ScheduleCalendarComponent implements AfterViewInit {
     private elementRef: ElementRef,
     // private scheduleService: ScheduleService
     private apollo: Apollo
-    ) { }
+  ) { }
 
   ngOnInit(): void {
-    this.schedules = this.apollo
+    this.apollo
       .watchQuery<any>({
         query: GET_SCHEDULES,
       })
-      .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
-  }
+      .valueChanges.subscribe(({ data, loading }) => {
+        data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
+        this.loading = loading;
+      });
 
-  ngAfterViewInit() {
-    this.calendarElement = $(this.elementRef.nativeElement);
-    this.calendarElement.fullCalendar({
-      height: 530,
-      header: {
+    this.calendarOptions = {
+      headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
-      dayNames: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
-      dayNamesShort: ['日','月','火','水','木','金','土'],
-      allDayText: '終日',
-      axisFormat: 'H:mm',
-      timeFormat: 'H:mm',
-      slotLabelFormat : 'H:mm',
+      initialView: 'dayGridMonth',
+      locale: 'ja',
+      themeSystem: 'bootstrap',
+      weekends: true,
+      navLinks: true,
       slotDuration: '00:15:00',
-      navLinks: true, // can click day/week names to navigate views
+      slotLabelInterval: '00:30',
       selectable: true,
-      selectHelper: true,
-      select: function(start, end) {
-        var title = prompt('Event Title:');
-        var eventData;
-        if (title) {
-          eventData = {
-            title: title,
-            start: start,
-            end: end
-          };
-          $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-        }
-        $('#calendar').fullCalendar('unselect');
-      },
       editable: true,
-      eventSources: this.schedules,
+      allDayText: '終日',
       buttonText: {
         today: '今日'
       },
-    });
+      events: []
+    };
+    setTimeout(() => {
+      this.calendarOptions.events = this.calendarEvents;
+    }, 500);
+    console.log(this.calendarEvents);
   }
 }
