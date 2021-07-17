@@ -54,13 +54,13 @@ export class ScheduleCalendarComponent {
 
   ngOnInit(): void {
     this.apollo
-    .watchQuery<any>({
-      query: GET_SCHEDULES,
-    })
-    .valueChanges.subscribe(({ data, loading }) => {
-      data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
-      this.loading = loading;
-    });
+      .watchQuery<any>({
+        query: GET_SCHEDULES,
+      })
+      .valueChanges.subscribe(({ data, loading }) => {
+        data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
+        this.loading = loading;
+      });
 
     this.calendarOptions = {
       headerToolbar: {
