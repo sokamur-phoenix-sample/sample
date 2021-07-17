@@ -33,7 +33,7 @@ const GET_SCHEDULES = gql`
   templateUrl: './schedule-calendar.component.html',
   styleUrls: ['./schedule-calendar.component.scss']
 })
-export class ScheduleCalendarComponent {
+export class ScheduleCalendarComponent implements OnInit {
 
   private calendarElement: any;
   // private schedules: Observable<any>;
