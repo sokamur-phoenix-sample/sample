@@ -39,6 +39,7 @@ export class ScheduleCalendarComponent {
   private schedules: Observable<any>;
   calendarOptions: CalendarOptions;
   calendarEvents: EventInput[] = [];
+  loading: boolean;
 
   // getSchedules() {
   //   this.scheduleService.getSchedules()
@@ -56,8 +57,9 @@ export class ScheduleCalendarComponent {
     .watchQuery<any>({
       query: GET_SCHEDULES,
     })
-    .valueChanges.subscribe(({ data }) => { 
-       data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
+    .valueChanges.subscribe(({ data, loading }) => {
+      data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
+      this.loading = loading;
     });
 
     // this.schedules.forEach(event => this.calendarEvents.push(event));
