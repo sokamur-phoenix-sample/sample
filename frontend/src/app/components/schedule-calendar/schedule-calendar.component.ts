@@ -52,13 +52,15 @@ export class ScheduleCalendarComponent {
   ) { }
 
   ngOnInit(): void {
-    this.schedules = this.apollo
-      .watchQuery<any>({
-        query: GET_SCHEDULES,
-      })
-      .valueChanges.pipe(map(result => result.data && result.data.schedules.edges.map(edge => edge.node)));
+    this.apollo
+    .watchQuery<any>({
+      query: GET_SCHEDULES,
+    })
+    .valueChanges.subscribe(({ data }) => { 
+       data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
+    });
 
-    this.schedules.forEach(event => this.calendarEvents.push(event));
+    // this.schedules.forEach(event => this.calendarEvents.push(event));
     this.calendarOptions = {
       headerToolbar: {
         left: 'prev,next today',
@@ -80,6 +82,7 @@ export class ScheduleCalendarComponent {
       },
       events: this.calendarEvents
     };
+    console.log(this.calendarEvents);
   }
 
   // ngAfterViewInit() {
