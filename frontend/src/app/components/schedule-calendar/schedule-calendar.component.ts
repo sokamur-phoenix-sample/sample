@@ -36,10 +36,10 @@ const GET_SCHEDULES = gql`
 export class ScheduleCalendarComponent {
 
   private calendarElement: any;
-  private schedules: Observable<any>;
+  // private schedules: Observable<any>;
   calendarOptions: CalendarOptions;
-  calendarEvents: EventInput[] = [];
-  loading: boolean;
+  private calendarEvents: EventInput[] = [];
+  private loading: boolean;
 
   // getSchedules() {
   //   this.scheduleService.getSchedules()
@@ -82,8 +82,11 @@ export class ScheduleCalendarComponent {
       buttonText: {
         today: '今日'
       },
-      events: this.calendarEvents
+      events: []
     };
+    setTimeout(() => {
+      this.calendarOptions.events = this.calendarEvents;
+    }, 500);
     console.log(this.calendarEvents);
   }
 
