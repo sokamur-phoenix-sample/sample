@@ -65,7 +65,7 @@
     "codelyzer": "^6.0.0",
     "copy-webpack-plugin": "^6.3.0",
     "css-loader": "^2.1.1",
-    "cssnano": "^3.10.0",
+    "cssnano": "^5.0.8",
     "exports-loader": "^0.6.3",
     "file-loader": "^0.10.0",
     "html-webpack-plugin": "^2.29.0",
