@@ -1,6 +1,6 @@
 # README
 
-* **Server Side: Rails v6.1.3.1**
+* **Server Side: Rails v6.1.4.1**
 * **Front End: Angular v12.1.2**
 * **Database: SQLite3**
 
@@ -44,8 +44,8 @@ webpack                         4.41.4
 $ git clone https://github.com/sokamur-phoenix-sample/sample.git
 $ cd sample
 $ docker-compose up -d --build
-$ docker-compose exec app bundle exec rails db:migrate
-$ docker-compose exec app bundle exec rails db:seed
+$ docker-compose exec app bin/rails db:migrate
+$ docker-compose exec app bin/rails db:seed
 * URL
 <http://localhost:3000>
 ```
@@ -54,14 +54,14 @@ $ docker-compose exec app bundle exec rails db:seed
 ```
 $ git clone https://github.com/sokamur-phoenix-sample/sample.git  
 $ cd sample
-$ bundle install --path vendor/bundle
-$ bundle exec rails db:migrate
-$ bundle exec rails db:seed
-$ cd sample/frontend
-$ npm install
+$ bundle config set --local path 'vendor/bundle'
+$ bundle install
+$ bin/rails db:migrate
+$ bin/rails db:seed
 
 * Angular 起動  
 $ cd sample/frontend
+$ npm install
 $ npm run build
 ※VM等に環境構築している場合は、3000/4200ポートをフォワードしてください。 
 $ ssh -L 3000:localhost:3000 user_name@Dev-Host(開発環境ホスト)  
