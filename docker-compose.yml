@@ -19,7 +19,8 @@ services:
       - frontend
     command: >-
       bash -c "rm -f tmp/pids/server.pid &&
-      bundle install &&
+      bundle config set --local path 'vendor/bundle' &&
+      bundle install --clean &&
       bin/rails db:create db:migrate &&
       bin/rails s -p 3000 -b '0.0.0.0'"
     ports:
