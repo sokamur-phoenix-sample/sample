@@ -15,7 +15,7 @@ RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
   && chmod 755 ~/chromedriver \
   && mv ~/chromedriver /usr/bin/chromedriver \
   && apt-get update -qq && apt-get install -y build-essential google-chrome-stable \
-  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
   && apt-get install -y nodejs \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
