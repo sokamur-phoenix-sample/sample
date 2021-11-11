@@ -15,26 +15,27 @@ $ ng version
                 |___/
 
 
-Angular CLI: 12.1.2
-Node: 14.17.0
-Package Manager: npm 7.20.0
+Angular CLI: 13.0.1
+Node: 16.13.0
+Package Manager: npm 8.1.0
 OS: linux x64
 
-Angular: 12.1.2
-... animations, cdk, cli, common, compiler, compiler-cli, core
-... forms, language-service, material, platform-browser
+Angular: 13.0.0
+... animations, cdk, common, compiler, compiler-cli, core, forms
+... language-service, material, platform-browser
 ... platform-browser-dynamic, platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1201.2
-@angular-devkit/build-angular   12.1.2
-@angular-devkit/core            12.1.2
-@angular-devkit/schematics      12.1.2
+@angular-devkit/architect       0.1300.1
+@angular-devkit/build-angular   13.0.1
+@angular-devkit/core            13.0.1
+@angular-devkit/schematics      13.0.1
+@angular/cli                    13.0.1
 @angular/flex-layout            9.0.0-beta.29
-@schematics/angular             12.1.2
+@schematics/angular             13.0.1
 rxjs                            6.6.7
-typescript                      4.3.5
+typescript                      4.4.4
 webpack                         4.41.4
 ```
 
