@@ -4,7 +4,7 @@ jobs:
     parallelism: 1
     working_directory: ~/app
     docker:
-      - image: circleci/ruby:3.0.2-buster-node-browsers
+      - image: cimg/ruby:3.1.0-node
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -41,7 +41,7 @@ jobs:
           path: /tmp/test-results
   bundle_update:
     docker:
-      - image: circleci/ruby:3.0.2-buster-node-browsers
+      - image: cimg/ruby:3.1.0-node
     steps:
       - checkout
       - run:
