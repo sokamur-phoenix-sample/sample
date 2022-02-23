@@ -1,6 +1,6 @@
 # README
 
-* **Server Side: Rails v6.1.4.1**
+* **Server Side: Rails v7.0.2**
 * **Front End: Angular v13.0.1**
 * **Database: SQLite3**
 
