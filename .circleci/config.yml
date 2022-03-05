@@ -1,16 +1,20 @@
 version: 2.1
+orbs:
+  ruby: circleci/ruby@1.4.0
+  browser-tools: circleci/browser-tools@1.2.4
 jobs:
   build:
     parallelism: 1
     working_directory: ~/app
     docker:
-      - image: cimg/ruby:3.1.0-node
+      - image: cimg/ruby:3.1.0-browsers
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
           TZ: /usr/share/zoneinfo/Asia/Tokyo
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
+      - browser-tools/install-browser-tools
       - checkout
       - restore_cache:
           keys:
