@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Subject } from 'rxjs';
-import * as $ from 'jquery';
 import { BaseballPlayer } from '../models/baseball-player';
 
 @Injectable({
@@ -29,7 +28,7 @@ export class BaseballPlayerService {
   }
 
   getBaseballPlayer(player_id: number): Promise<BaseballPlayer> {
-    const url = `${this.baseballPlayersUrl}/${player_id}`;
+    const url = `api/v1/baseball_players/player_id`;
     return this.http.get(url)
                .toPromise()
                .then((response: any) => response.baseball_player as BaseballPlayer)
@@ -37,7 +36,7 @@ export class BaseballPlayerService {
   }
 
   update(player: BaseballPlayer): Promise<any> {
-    const url = `${this.baseballPlayersUrl}/${player.id}`;
+    const url = `api/v1/baseball_players/player_id`;
     let headers = new HttpHeaders({'Content-Type': 'application/json'});
     return this.http
                .put(url, JSON.stringify(player), {headers: headers})
