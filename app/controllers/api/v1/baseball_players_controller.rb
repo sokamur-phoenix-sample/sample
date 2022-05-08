@@ -24,7 +24,7 @@ class Api::V1::BaseballPlayersController < Api::V1::BaseController
   # only allow the white list through.
   def baseball_player_params
     params.require(:baseball_player).permit(
-      :name, :team, :position, :hometown
+      :id, :name, :team, :position, :hometown
     )
   end
 end
