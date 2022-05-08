@@ -18,3 +18,14 @@ font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", Y
     background-color: #f0f0ff;
 }
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+a { 
+text-decoration: none;
+}
+a:hover { 
+text-decoration: none;
+}

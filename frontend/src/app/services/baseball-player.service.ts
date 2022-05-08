@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Subject } from 'rxjs';
-import * as $ from 'jquery';
 import { BaseballPlayer } from '../models/baseball-player';
 
 @Injectable({
