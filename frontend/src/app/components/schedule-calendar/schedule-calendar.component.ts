@@ -1,3 +1,4 @@
+import {Apollo, gql} from 'apollo-angular';
 import { Component, OnInit, ElementRef } from '@angular/core';
 
 //import { Schedule } from '../../models/schedule';
@@ -7,8 +8,8 @@ import { EventInput } from '@fullcalendar/core';
 
 // import { Observable } from 'rxjs';
 // import { map } from 'rxjs/operators';
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
+
+
 
 const GET_SCHEDULES = gql`
   {
