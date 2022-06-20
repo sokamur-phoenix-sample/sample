@@ -53,7 +53,6 @@ FullCalendarModule.registerPlugins([
     AppRoutingModule,
     HttpClientModule,
     ApolloModule,
-    HttpLinkModule,
     FormsModule,
     MatTableModule,
     MatToolbarModule,
