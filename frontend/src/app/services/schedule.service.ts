@@ -1,8 +1,9 @@
+import {Apollo, gql} from 'apollo-angular';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Apollo } from 'apollo-angular';
+
 import { map } from 'rxjs/operators';
-import gql from 'graphql-tag';
+
 
 import { Schedule } from '../models/schedule';
 
