@@ -40,7 +40,7 @@ spec:
         - name: webapp-on-k8s
           image: webapp
           # デフォルトで pull しにいってコケるので Never させないようにする(webapp:latest などの場合)
-          imagePullPolicy: Never
+          # imagePullPolicy: Never
           command:
             - /bin/bash
           args:
