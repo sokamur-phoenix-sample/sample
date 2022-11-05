@@ -25,8 +25,10 @@ RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
   && bundle config set --local path 'vendor/bundle' \
   && RAILS_ENV=development \
   && bundle install --clean --with development \
-  && cd frontend \
-  && npm install
+
+RUN cd frontend \
+  && npm install \
+  && npm run build
 
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
