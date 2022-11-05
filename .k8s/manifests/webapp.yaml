@@ -38,9 +38,9 @@ spec:
           emptyDir: {}
       containers:
         - name: webapp-on-k8s
-          image: webapp
+          image: webapp:0.0.1
           # デフォルトで pull しにいってコケるので Never させないようにする(webapp:latest などの場合)
-          # imagePullPolicy: Never
+          imagePullPolicy: Never
           command:
             - /bin/bash
           args:
