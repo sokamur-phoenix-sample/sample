@@ -26,9 +26,7 @@ RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
   && RAILS_ENV=development \
   && bundle install --clean --with development \
   && cd frontend \
-  && npm install -g @angular/cli@latest \
-  && npm install \
-  && npm run build
+  && npm install
 
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
