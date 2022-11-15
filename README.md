@@ -78,7 +78,7 @@ $ bundle exec rails s -b 0.0.0.0
 
 **【Kubernetes/minikube 環境】**
 ```
-$ minikube start --driver=docker --logtostderr -v 8
+$ minikube start --driver=docker --logtostderr -v 8 --extra-config=apiserver.service-node-port-range=80-30000
 [minikube 環境に Docker イメージを作成]
 $ (eval $(minikube docker-env) && docker build -t webapp:0.0.1 -f Dockerfile.k8s .)
 [マニフェストのデプロイ]
