@@ -1,7 +1,7 @@
 # README
 
 * **Server Side: Rails v7.0.2**
-* **Front End: Angular v13.0.1**
+* **Front End: Angular v13.3.9**
 * **Database: SQLite3**
 
 ```
@@ -15,28 +15,29 @@ $ ng version
                 |___/
 
 
-Angular CLI: 13.0.1
-Node: 16.13.0
-Package Manager: npm 8.1.0
+Angular CLI: 13.3.9
+Node: 16.18.1
+Package Manager: npm 8.19.2
 OS: linux x64
 
-Angular: 13.0.0
-... animations, cdk, common, compiler, compiler-cli, core, forms
-... language-service, material, platform-browser
-... platform-browser-dynamic, platform-server, router
+Angular: 13.3.11
+... animations, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1300.1
-@angular-devkit/build-angular   13.0.1
-@angular-devkit/core            13.0.1
-@angular-devkit/schematics      13.0.1
-@angular/cli                    13.0.1
-@angular/flex-layout            9.0.0-beta.29
-@schematics/angular             13.0.1
+@angular-devkit/architect       0.1303.9
+@angular-devkit/build-angular   13.3.9
+@angular-devkit/core            13.3.9
+@angular-devkit/schematics      13.3.9
+@angular/cdk                    13.3.9
+@angular/cli                    13.3.9
+@angular/flex-layout            13.0.0-beta.38
+@angular/material               13.3.9
+@schematics/angular             13.3.9
 rxjs                            6.6.7
-typescript                      4.4.4
-webpack                         4.41.4
+typescript                      4.6.4
 ```
 
 ### 開発環境の準備
@@ -73,4 +74,17 @@ $ cd sample （別ターミナル等）
 $ bundle exec rails s -b 0.0.0.0  
 * URL
 <http://Dev-Host(開発環境ホスト):3000>
+```
+
+**【Kubernetes/minikube 環境】**
+```
+$ minikube start --driver=docker --logtostderr -v 8
+[minikube 環境に Docker イメージを作成]
+$ (eval $(minikube docker-env) && docker build -t webapp:0.0.1 -f Dockerfile.k8s .)
+[マニフェストのデプロイ]
+$ kubectl apply -f .k8s/manifests/webapp.yaml
+[kubectl port-forward コマンドで webapp-service へアクセス可能にする]
+$ kubectl port-forward --address 0.0.0.0 -n default service/webapp-service 3000:3000
+$ curl -I http://localhost:3000
+HTTP/1.1 200 OK
 ```
