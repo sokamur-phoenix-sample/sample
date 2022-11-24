@@ -36,37 +36,33 @@ FullCalendarModule.registerPlugins([
 ]);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BaseballPlayerIndexComponent,
-    BaseballPlayerShowComponent,
-    BaseballPlayerEditComponent,
-    ScheduleCalendarComponent
-  ],
-  entryComponents: [
-    BaseballPlayerShowComponent,
-    BaseballPlayerEditComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ApolloModule,
-    FormsModule,
-    MatTableModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatMenuModule,
-    MatListModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    FullCalendarModule,
-    ModalModule.forRoot()
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        BaseballPlayerIndexComponent,
+        BaseballPlayerShowComponent,
+        BaseballPlayerEditComponent,
+        ScheduleCalendarComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ApolloModule,
+        FormsModule,
+        MatTableModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatMenuModule,
+        MatListModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        FullCalendarModule,
+        ModalModule.forRoot()
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(
