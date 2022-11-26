@@ -21,7 +21,11 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@fullcalendar/common/main.css",
+              "./node_modules/@fullcalendar/daygrid/main.css",
+              "./node_modules/@fullcalendar/timegrid/main.css",
+              "./node_modules/@fullcalendar/list/main.css"
             ],
             "scripts": [],
             "vendorChunk": true,
@@ -29,7 +33,10 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "allowedCommonJsDependencies": [
+              "fast-deep-equal"
+            ]
           },
           "configurations": {
             "production": {
@@ -111,7 +118,6 @@
       }
     }
   },
-  "defaultProject": "frontend",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
@@ -120,5 +126,8 @@
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
