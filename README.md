@@ -1,7 +1,7 @@
 # README
 
 * **Server Side: Rails v7.0.2**
-* **Front End: Angular v13.3.9**
+* **Front End: Angular v14.2.10**
 * **Database: SQLite3**
 
 ```
@@ -15,27 +15,27 @@ $ ng version
                 |___/
 
 
-Angular CLI: 13.3.9
+Angular CLI: 14.2.10
 Node: 16.18.1
 Package Manager: npm 8.19.2
 OS: linux x64
 
-Angular: 13.3.11
+Angular: 14.2.12
 ... animations, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1303.9
-@angular-devkit/build-angular   13.3.9
-@angular-devkit/core            13.3.9
-@angular-devkit/schematics      13.3.9
-@angular/cdk                    13.3.9
-@angular/cli                    13.3.9
-@angular/flex-layout            13.0.0-beta.38
-@angular/material               13.3.9
-@schematics/angular             13.3.9
+@angular-devkit/architect       0.1402.10
+@angular-devkit/build-angular   14.2.10
+@angular-devkit/core            14.2.10
+@angular-devkit/schematics      14.2.10
+@angular/cdk                    14.2.7
+@angular/cli                    14.2.10
+@angular/flex-layout            14.0.0-beta.41
+@angular/material               14.2.7
+@schematics/angular             14.2.10
 rxjs                            6.6.7
 typescript                      4.6.4
 ```
