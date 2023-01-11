@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     parallelism: 1
-    working_directory: ~/app
+    working_directory: ~/repo
     docker:
       - image: cimg/ruby:3.1.2-browsers
         environment:
