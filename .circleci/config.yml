@@ -16,9 +16,9 @@ jobs:
     steps:
       - browser-tools/install-browser-tools
       - run:
-        name: Remove app directory
-        command: >-
-          bash -c "rm -Rf /home/circleci/app"
+          name: Remove app directory
+          command: >-
+            bash -c "rm -Rf /home/circleci/app"
       - checkout
       - restore_cache:
           keys:
