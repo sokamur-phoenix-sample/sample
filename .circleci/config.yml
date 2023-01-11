@@ -16,7 +16,7 @@ jobs:
     steps:
       - browser-tools/install-browser-tools
       - checkout:
-          path: ~/repo
+          path: ~/app
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
