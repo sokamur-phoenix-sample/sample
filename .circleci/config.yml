@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     parallelism: 1
-    working_directory: ~/app
+    working_directory: app
     docker:
       - image: cimg/ruby:3.1.2-browsers
         environment:
@@ -15,8 +15,7 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - browser-tools/install-browser-tools
-      - checkout:
-          path: ~/app
+      - checkout
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
