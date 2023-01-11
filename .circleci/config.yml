@@ -15,7 +15,7 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - browser-tools/install-browser-tools
-      - checkout
+      - checkout:
           path: ~/repo
       - restore_cache:
           keys:
