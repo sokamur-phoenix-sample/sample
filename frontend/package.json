@@ -62,7 +62,6 @@
     "cssnano": "^5.0.8",
     "exports-loader": "^0.6.3",
     "file-loader": "^0.10.0",
-    "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine-core": "^4.2.0",
     "jasmine-spec-reporter": "^7.0.0",
     "karma": "~6.3.16",
