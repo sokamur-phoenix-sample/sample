@@ -14,8 +14,8 @@ jobs:
           TZ: /usr/share/zoneinfo/Asia/Tokyo
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
-      - browser-tools/install-browser-tools
       - checkout
+      - browser-tools/install-browser-tools
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
