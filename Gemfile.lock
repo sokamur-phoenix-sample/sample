@@ -93,7 +93,7 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffi (1.15.5)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     goldiloader (4.2.0)
       activerecord (>= 5.2, < 7.2)
