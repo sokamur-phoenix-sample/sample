@@ -15,29 +15,26 @@ $ ng version
                 |___/
 
 
-Angular CLI: 14.2.10
-Node: 16.18.1
-Package Manager: npm 8.19.2
+Angular CLI: 15.2.6
+Node: 18.16.0
+Package Manager: npm 9.5.1
 OS: linux x64
 
-Angular: 14.2.12
-... animations, common, compiler, compiler-cli, core, forms
-... language-service, platform-browser, platform-browser-dynamic
-... platform-server, router
+Angular: 15.2.8
+... animations, cdk, common, compiler, compiler-cli, core, forms
+... language-service, material, platform-browser
+... platform-browser-dynamic, platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1402.10
-@angular-devkit/build-angular   14.2.10
-@angular-devkit/core            14.2.10
-@angular-devkit/schematics      14.2.10
-@angular/cdk                    14.2.7
-@angular/cli                    14.2.10
-@angular/flex-layout            14.0.0-beta.41
-@angular/material               14.2.7
-@schematics/angular             14.2.10
+@angular-devkit/architect       0.1502.6
+@angular-devkit/build-angular   15.2.6
+@angular-devkit/core            15.2.6
+@angular-devkit/schematics      15.2.6
+@angular/cli                    15.2.6
+@schematics/angular             15.2.6
 rxjs                            6.6.7
-typescript                      4.6.4
+typescript                      4.9.5
 ```
 
 ### 開発環境の準備

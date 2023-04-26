@@ -3,9 +3,12 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 
 //import { Schedule } from '../../models/schedule';
 //import { ScheduleService } from '../../services/schedule.service';
-import { CalendarOptions } from '@fullcalendar/angular';
+import { CalendarOptions } from '@fullcalendar/core';
 import { EventInput } from '@fullcalendar/core';
-
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
 // import { Observable } from 'rxjs';
 // import { map } from 'rxjs/operators';
 
@@ -64,6 +67,12 @@ export class ScheduleCalendarComponent implements OnInit {
       });
 
     this.calendarOptions = {
+      plugins: [
+        dayGridPlugin,
+        timeGridPlugin,
+        listPlugin,
+        interactionPlugin
+      ],
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',

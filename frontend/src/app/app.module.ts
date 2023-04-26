@@ -9,31 +9,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyCheckboxModule as MatCheckboxModule } from '@angular/material/legacy-checkbox';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatTableModule } from '@angular/material/table';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FullCalendarModule } from '@fullcalendar/angular';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
-import interactionPlugin from '@fullcalendar/interaction';
+// import dayGridPlugin from '@fullcalendar/daygrid';
+// import timeGridPlugin from '@fullcalendar/timegrid';
+// import listPlugin from '@fullcalendar/list';
+// import interactionPlugin from '@fullcalendar/interaction';
 import { BaseballPlayerIndexComponent } from './components/baseball-player-index/baseball-player-index.component';
 import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
 import { BaseballPlayerEditComponent } from './components/baseball-player-edit/baseball-player-edit.component';
 import { ScheduleCalendarComponent } from './components/schedule-calendar/schedule-calendar.component';
 
-FullCalendarModule.registerPlugins([
-  dayGridPlugin,
-  timeGridPlugin,
-  listPlugin,
-  interactionPlugin
-]);
+// FullCalendarModule.registerPlugins([
+//   dayGridPlugin,
+//   timeGridPlugin,
+//   listPlugin,
+//   interactionPlugin
+// ]);
 
 @NgModule({
     declarations: [
