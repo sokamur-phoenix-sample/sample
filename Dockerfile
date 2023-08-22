@@ -14,9 +14,9 @@ RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
   && chown root:root ~/chromedriver \
   && chmod 755 ~/chromedriver \
   && mv ~/chromedriver /usr/bin/chromedriver \
-  && apt-get update -qq && apt-get install -y build-essential google-chrome-stable \
+  && apt update -qq && apt install -y build-essential google-chrome-stable \
   && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
-  && apt-get install -y nodejs \
-  && apt-get clean \
+  && apt install -y nodejs \
+  && apt clean \
   && rm -rf /var/lib/apt/lists/* \
   && gem install bundler sqlite3 pry pry-coolline
