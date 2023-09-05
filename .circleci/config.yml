@@ -15,7 +15,7 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - checkout
-      - browser-tools/install-browser-tools
+      # - browser-tools/install-browser-tools
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
