@@ -15,7 +15,8 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - checkout
-      # - browser-tools/install-browser-tools
+      - browser-tools/install-browser-tools:
+          chrome-version: 116.0.5845.96
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
