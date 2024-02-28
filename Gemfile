@@ -39,6 +39,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -56,7 +57,6 @@ group :test do
   gem 'capybara'
   # gem 'webdrivers'
   gem 'selenium-webdriver'
-  gem 'rswag-specs'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
