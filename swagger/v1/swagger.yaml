@@ -3,9 +3,12 @@ openapi: 3.0.1
 info:
   title: API V1
   version: v1
-paths: {}
+paths:
+  "/api/v1/baseball_players":
+    get:
+      summary: GET baseball_players
+      responses:
+        '200':
+          description: Success
 servers:
-- url: https://{defaultHost}
-  variables:
-    defaultHost:
-      default: www.example.com
+- url: http://localhost:3000

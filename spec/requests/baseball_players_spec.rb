@@ -7,10 +7,10 @@ RSpec.describe "BaseballPlayers", type: :request do
         consumes "application/json"
         produces "application/json"
         response 200, "Success" do
-          # before do
-          #   get api_v1_baseball_players_path
-          # end
-          schema expected_response_schema.schema.as_json
+          before do
+            get api_v1_baseball_players_path
+          end
+          # schema expected_response_schema.schema.as_json
 
           it "succeeds to responde with success" do
             expect(response).to have_http_status(:success)
