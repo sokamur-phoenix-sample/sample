@@ -9,6 +9,18 @@ paths:
       summary: GET baseball_players
       responses:
         '200':
-          description: Success
+          description: baseball_players
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  example:
+                    id: 1
+                    name: 大谷 翔平
+                    team: ロサンゼルス・ドジャース
+                    position: ２番DH
+                    hometown: 岩手県
 servers:
 - url: http://localhost:3000
