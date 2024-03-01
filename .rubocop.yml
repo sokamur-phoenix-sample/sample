@@ -57,6 +57,10 @@ IfUnlessModifier:
 Metrics/LineLength:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+
 Metrics/MethodLength:
   Enabled: false
 
