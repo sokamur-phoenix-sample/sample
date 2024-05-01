@@ -15,29 +15,28 @@ $ ng version
                 |___/
 
 
-Angular CLI: 16.2.8
-Node: 18.18.2
-Package Manager: npm 10.2.1
+Angular CLI: 17.3.6
+Node: 20.11.0
+Package Manager: npm 10.7.0
 OS: linux x64
 
-Angular: 16.2.11
-... animations, common, compiler, compiler-cli, core, forms
+Angular: 17.3.6
+... animations, cli, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1602.8
-@angular-devkit/build-angular   16.2.8
-@angular-devkit/core            16.2.8
-@angular-devkit/schematics      16.2.8
-@angular/cdk                    16.2.10
-@angular/cli                    16.2.8
-@angular/material               16.2.10
-@schematics/angular             16.2.8
+@angular-devkit/architect       0.1703.6
+@angular-devkit/build-angular   17.3.6
+@angular-devkit/core            17.3.6
+@angular-devkit/schematics      17.3.6
+@angular/cdk                    16.2.14
+@angular/material               16.2.14
+@schematics/angular             17.3.6
 rxjs                            6.6.7
-typescript                      4.9.5
-zone.js                         0.13.3
+typescript                      5.4.5
+zone.js                         0.14.5
 
 ```
 
