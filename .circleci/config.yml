@@ -32,7 +32,9 @@ jobs:
       - run:
           name: Waits for Angular
           command: >-
-            bash -c "cd frontend && npm install && npm run test"
+            bash -c "curl -sL https://deb.nodesource.com/setup_18.x | bash - &&
+            apt install -y nodejs &&
+            cd frontend && npm install && npm run test"
       - run:
           name: Create DB
           command: RAILS_ENV=test bundle exec rails db:create db:schema:load
