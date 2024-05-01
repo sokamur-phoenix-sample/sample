@@ -33,7 +33,7 @@ jobs:
           name: Waits for Angular
           command: >-
             bash -c "curl -sL https://deb.nodesource.com/setup_18.x | bash - &&
-            apt install -y nodejs &&
+            sudo apt install -y nodejs &&
             cd frontend && npm install && npm run test"
       - run:
           name: Create DB
