@@ -15,7 +15,7 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - checkout
-      - browser-tools/install-browser-tools:
+      - browser-tools/install-chrome:
           chrome-version: 124.0.6367.78
       - restore_cache:
           keys:
