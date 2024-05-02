@@ -7,7 +7,7 @@ jobs:
     parallelism: 1
     working_directory: ~/app
     docker:
-      - image: cimg/ruby:3.1.2-browsers
+      - image: cimg/ruby:3.3.1-browsers
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -15,8 +15,8 @@ jobs:
           CIRCLE_TEST_REPORTS: /tmp/test-results
     steps:
       - checkout
-      - browser-tools/install-browser-tools:
-          chrome-version: 116.0.5845.96
+      - browser-tools/install-chrome:
+          chrome-version: 124.0.6367.78
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
@@ -48,7 +48,7 @@ jobs:
           path: coverage
   bundle_update:
     docker:
-      - image: cimg/ruby:3.1.2-node
+      - image: cimg/ruby:3.3.1-node
     steps:
       - checkout
       - run:
