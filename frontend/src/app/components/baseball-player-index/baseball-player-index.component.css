@@ -16,7 +16,7 @@
   margin-top: 160px;
   width: 90%;
 }
-.mat-row:hover {
+.mat-mdc-row:hover {
   cursor: pointer;
   color: #607D8B;
   background-color: #DDD;
