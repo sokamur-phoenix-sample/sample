@@ -21,9 +21,9 @@ Package Manager: npm 10.7.0
 OS: linux x64
 
 Angular: 17.3.7
-... animations, common, compiler, compiler-cli, core, forms
-... language-service, platform-browser, platform-browser-dynamic
-... platform-server, router
+... animations, cdk, common, compiler, compiler-cli, core, forms
+... language-service, material, platform-browser
+... platform-browser-dynamic, platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
@@ -31,9 +31,7 @@ Package                         Version
 @angular-devkit/build-angular   17.3.6
 @angular-devkit/core            17.3.6
 @angular-devkit/schematics      17.3.6
-@angular/cdk                    16.2.14
 @angular/cli                    17.3.6
-@angular/material               16.2.14
 @schematics/angular             17.3.6
 rxjs                            6.6.7
 typescript                      5.4.5
