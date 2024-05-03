@@ -1,4 +1,4 @@
-FROM ruby:3.1.2
+FROM ruby:3.3.1
 
 ENV LANG ja_JP.UTF-8
 
@@ -15,7 +15,7 @@ RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
   && chmod 755 ~/chromedriver \
   && mv ~/chromedriver /usr/bin/chromedriver \
   && apt update -qq && apt install -y build-essential google-chrome-stable \
-  && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+  && curl -sL https://deb.nodesource.com/setup_20.x | bash - \
   && apt install -y nodejs \
   && apt clean \
   && rm -rf /var/lib/apt/lists/* \
