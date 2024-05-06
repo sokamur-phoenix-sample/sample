@@ -25,5 +25,6 @@
 /public/assets
 /public/javascripts
 /frontend/node_modules
+/frontend/.nx
 /npm-debug.log
 .ruby-version
