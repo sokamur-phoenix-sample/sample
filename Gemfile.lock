@@ -102,7 +102,7 @@ GEM
       activesupport (>= 6.1, < 7.2)
     graphiql-rails (1.10.0)
       railties
-    graphql (2.3.8)
+    graphql (2.3.10)
       base64
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
@@ -197,7 +197,7 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     regexp_parser (2.9.2)
-    rexml (3.3.1)
+    rexml (3.3.2)
       strscan
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
@@ -255,7 +255,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (4.22.0)
+    selenium-webdriver (4.23.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
