@@ -3,7 +3,7 @@ import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,19 +35,16 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
 //   interactionPlugin
 // ]);
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         BaseballPlayerIndexComponent,
         BaseballPlayerShowComponent,
         BaseballPlayerEditComponent,
         ScheduleCalendarComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        HttpClientModule,
         ApolloModule,
         FormsModule,
         MatTableModule,
@@ -59,11 +56,7 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
         MatButtonModule,
         MatCheckboxModule,
         FullCalendarModule,
-        ModalModule.forRoot()
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-})
+        ModalModule.forRoot()], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
   constructor(
     apollo: Apollo,
