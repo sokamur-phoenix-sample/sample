@@ -1,7 +1,7 @@
 # README
 
 * **Server Side: Rails v7.0.8**
-* **Front End: Angular v17.3.6**
+* **Front End: Angular v18.1.4**
 * **Database: SQLite3**
 
 ```
@@ -13,29 +13,28 @@ $ ng version
   / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
                 |___/
+    
 
-
-Angular CLI: 17.3.6
-Node: 20.11.0
-Package Manager: npm 10.7.0
+Angular CLI: 18.1.4
+Node: 20.16.0
+Package Manager: npm 10.8.2
 OS: linux x64
 
-Angular: 17.3.7
-... animations, cdk, common, compiler, compiler-cli, core, forms
-... language-service, material, platform-browser
+Angular: 18.1.4
+... animations, cdk, cli, common, compiler, compiler-cli, core
+... forms, language-service, material, platform-browser
 ... platform-browser-dynamic, platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1703.6
-@angular-devkit/build-angular   17.3.6
-@angular-devkit/core            17.3.6
-@angular-devkit/schematics      17.3.6
-@angular/cli                    17.3.6
-@schematics/angular             17.3.6
+@angular-devkit/architect       0.1801.4
+@angular-devkit/build-angular   18.1.4
+@angular-devkit/core            18.1.4
+@angular-devkit/schematics      18.1.4
+@schematics/angular             18.1.4
 rxjs                            6.6.7
-typescript                      5.4.5
-zone.js                         0.14.5
+typescript                      5.5.4
+zone.js                         0.14.10
 
 ```
 
