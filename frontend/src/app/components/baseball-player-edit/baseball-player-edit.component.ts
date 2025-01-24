@@ -4,9 +4,10 @@ import { BaseballPlayer } from '../../models/baseball-player';
 import { BaseballPlayerService } from '../../services/baseball-player.service';
 
 @Component({
-  selector: 'app-baseball-player-edit',
-  templateUrl: './baseball-player-edit.component.html',
-  styleUrls: ['./baseball-player-edit.component.css']
+    selector: 'app-baseball-player-edit',
+    templateUrl: './baseball-player-edit.component.html',
+    styleUrls: ['./baseball-player-edit.component.css'],
+    standalone: false
 })
 export class BaseballPlayerEditComponent implements OnInit {
 

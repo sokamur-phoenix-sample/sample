@@ -6,9 +6,10 @@ import { BaseballPlayerService } from '../../services/baseball-player.service';
 import { BaseballPlayerShowComponent }  from '../baseball-player-show/baseball-player-show.component';
 
 @Component({
-  selector: 'app-baseball-player-index',
-  templateUrl: './baseball-player-index.component.html',
-  styleUrls: ['./baseball-player-index.component.css']
+    selector: 'app-baseball-player-index',
+    templateUrl: './baseball-player-index.component.html',
+    styleUrls: ['./baseball-player-index.component.css'],
+    standalone: false
 })
 export class BaseballPlayerIndexComponent implements OnInit {
 

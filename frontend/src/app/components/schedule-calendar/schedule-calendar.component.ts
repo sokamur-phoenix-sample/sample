@@ -33,9 +33,10 @@ const GET_SCHEDULES = gql`
 `;
 
 @Component({
-  selector: 'app-schedule-calendar',
-  templateUrl: './schedule-calendar.component.html',
-  styleUrls: ['./schedule-calendar.component.scss']
+    selector: 'app-schedule-calendar',
+    templateUrl: './schedule-calendar.component.html',
+    styleUrls: ['./schedule-calendar.component.scss'],
+    standalone: false
 })
 export class ScheduleCalendarComponent implements OnInit {
 

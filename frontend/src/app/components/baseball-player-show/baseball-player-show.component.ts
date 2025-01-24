@@ -4,9 +4,10 @@ import { BaseballPlayer } from '../../models/baseball-player';
 import { BaseballPlayerEditComponent }  from '../baseball-player-edit/baseball-player-edit.component';
 
 @Component({
-  selector: 'app-baseball-player-show',
-  templateUrl: './baseball-player-show.component.html',
-  styleUrls: ['./baseball-player-show.component.css']
+    selector: 'app-baseball-player-show',
+    templateUrl: './baseball-player-show.component.html',
+    styleUrls: ['./baseball-player-show.component.css'],
+    standalone: false
 })
 export class BaseballPlayerShowComponent implements OnInit {
 
