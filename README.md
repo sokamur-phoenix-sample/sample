@@ -13,28 +13,31 @@ $ ng version
   / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
                 |___/
-    
 
-Angular CLI: 18.1.4
-Node: 20.16.0
-Package Manager: npm 10.8.2
+
+Angular CLI: 19.1.4
+Node: 22.13.1
+Package Manager: npm 11.0.0
 OS: linux x64
 
-Angular: 18.1.4
-... animations, cdk, cli, common, compiler, compiler-cli, core
-... forms, language-service, material, platform-browser
-... platform-browser-dynamic, platform-server, router
+Angular: 19.1.3
+... animations, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1801.4
-@angular-devkit/build-angular   18.1.4
-@angular-devkit/core            18.1.4
-@angular-devkit/schematics      18.1.4
-@schematics/angular             18.1.4
+@angular-devkit/architect       0.1901.4
+@angular-devkit/build-angular   19.1.4
+@angular-devkit/core            19.1.4
+@angular-devkit/schematics      19.1.4
+@angular/cdk                    19.1.1
+@angular/cli                    19.1.4
+@angular/material               19.1.1
+@schematics/angular             19.1.4
 rxjs                            6.6.7
-typescript                      5.5.4
-zone.js                         0.14.10
+typescript                      5.7.3
+zone.js                         0.15.0
 
 ```
 
