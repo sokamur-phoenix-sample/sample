@@ -1,7 +1,7 @@
 # README
 
 * **Server Side: Rails v8.0**
-* **Front End: Angular v18.1.4**
+* **Front End: Angular v19.1.4**
 * **Database: SQLite3**
 
 ```
