@@ -1,18 +1,11 @@
 import {Apollo, gql} from 'apollo-angular';
 import { Component, OnInit, ElementRef } from '@angular/core';
-
-//import { Schedule } from '../../models/schedule';
-//import { ScheduleService } from '../../services/schedule.service';
 import { CalendarOptions } from '@fullcalendar/core';
 import { EventInput } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
-// import { Observable } from 'rxjs';
-// import { map } from 'rxjs/operators';
-
-
 
 const GET_SCHEDULES = gql`
   {
@@ -41,31 +34,24 @@ const GET_SCHEDULES = gql`
 export class ScheduleCalendarComponent implements OnInit {
 
   private calendarElement: any;
-  // private schedules: Observable<any>;
   calendarOptions: CalendarOptions;
   private calendarEvents: EventInput[] = [];
   private loading: boolean;
 
-  // getSchedules() {
-  //   this.scheduleService.getSchedules()
-  //     .subscribe((response: any) => this.schedules = response);
-  // }
-
   constructor(
     private elementRef: ElementRef,
-    // private scheduleService: ScheduleService
-    private apollo: Apollo
+    // private apollo: Apollo
   ) { }
 
   ngOnInit(): void {
-    this.apollo
-      .watchQuery<any>({
-        query: GET_SCHEDULES,
-      })
-      .valueChanges.subscribe(({ data, loading }) => {
-        data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
-        this.loading = loading;
-      });
+    // this.apollo
+    //   .watchQuery<any>({
+    //     query: GET_SCHEDULES,
+    //   })
+    //   .valueChanges.subscribe(({ data, loading }) => {
+    //     data && data.schedules.edges.map(edge => this.calendarEvents.push(edge.node));
+    //     this.loading = loading;
+    //   });
 
     this.calendarOptions = {
       plugins: [
