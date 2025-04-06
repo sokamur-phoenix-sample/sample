@@ -54,7 +54,7 @@ Layout/HashAlignment:
 IfUnlessModifier:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/BlockLength:
