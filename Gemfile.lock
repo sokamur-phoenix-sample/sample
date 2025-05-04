@@ -92,7 +92,7 @@ GEM
       xpath (~> 3.2)
     coderay (1.1.3)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.2)
+    connection_pool (2.5.3)
     crass (1.0.6)
     csv (3.3.4)
     date (3.4.1)
@@ -114,7 +114,7 @@ GEM
       activesupport (>= 6.1, < 8.1)
     graphiql-rails (1.10.4)
       railties
-    graphql (2.5.4)
+    graphql (2.5.5)
       base64
       fiber-storage
       logger
@@ -152,7 +152,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.25.5)
     mutex_m (0.3.0)
-    net-imap (0.5.7)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -181,10 +181,10 @@ GEM
       pry (>= 0.13, < 0.16)
     pry-rails (0.3.11)
       pry (>= 0.13.0)
-    psych (5.2.3)
+    psych (5.2.4)
       date
       stringio
-    public_suffix (6.0.1)
+    public_suffix (6.0.2)
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -240,21 +240,21 @@ GEM
     rexml (3.4.1)
     rspec-core (3.13.3)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.3)
+    rspec-expectations (3.13.4)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.2)
+    rspec-mocks (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (7.1.1)
-      actionpack (>= 7.0)
-      activesupport (>= 7.0)
-      railties (>= 7.0)
+    rspec-rails (8.0.0)
+      actionpack (>= 7.2)
+      activesupport (>= 7.2)
+      railties (>= 7.2)
       rspec-core (~> 3.13)
       rspec-expectations (~> 3.13)
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
-    rspec-support (3.13.2)
+    rspec-support (3.13.3)
     rswag-api (2.16.0)
       activesupport (>= 5.2, < 8.1)
       railties (>= 5.2, < 8.1)
@@ -266,7 +266,7 @@ GEM
     rswag-ui (2.16.0)
       actionpack (>= 5.2, < 8.1)
       railties (>= 5.2, < 8.1)
-    rubocop (1.75.3)
+    rubocop (1.75.4)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -297,7 +297,7 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
-    selenium-webdriver (4.31.0)
+    selenium-webdriver (4.32.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
