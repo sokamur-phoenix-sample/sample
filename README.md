@@ -13,32 +13,29 @@ $ ng version
   / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
                 |___/
+    
 
-
-Angular CLI: 19.1.4
-Node: 22.13.1
-Package Manager: npm 11.0.0
+Angular CLI: 20.0.3
+Node: 22.16.0
+Package Manager: npm 11.4.2
 OS: linux x64
 
-Angular: 19.1.3
-... animations, common, compiler, compiler-cli, core, forms
-... language-service, platform-browser, platform-browser-dynamic
-... platform-server, router
+Angular: 20.0.3
+... animations, cdk, common, compiler, compiler-cli, core, forms
+... language-service, material, platform-browser
+... platform-browser-dynamic, platform-server, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1901.4
-@angular-devkit/build-angular   19.1.4
-@angular-devkit/core            19.1.4
-@angular-devkit/schematics      19.1.4
-@angular/cdk                    19.1.1
-@angular/cli                    19.1.4
-@angular/material               19.1.1
-@schematics/angular             19.1.4
+@angular-devkit/architect       0.2000.2
+@angular-devkit/build-angular   20.0.2
+@angular-devkit/core            20.0.2
+@angular-devkit/schematics      20.0.2
+@angular/cli                    20.0.2
+@schematics/angular             20.0.2
 rxjs                            6.6.7
-typescript                      5.7.3
-zone.js                         0.15.0
-
+typescript                      5.8.3
+zone.js                         0.15.1
 ```
 
 ### 開発環境の準備
