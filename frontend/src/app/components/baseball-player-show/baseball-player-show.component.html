@@ -3,37 +3,39 @@
   <button type="button" class="btn-close pull-right" aria-label="Close" (click)="bsModalRef.hide()"></button>
 </div>
 <div class="modal-body">
-  <div *ngIf="player">
-    <table class="baseball-player-detail">
-      <thead>
-        <tr>
-          <th colspan="2">野球選手詳細</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>ＩＤ番号</th>
-          <td>{{player.id}}</td>
-        </tr>
-        <tr>
-          <th>選手名</th>
-          <td>{{player.name}}</td>
-        </tr>
-        <tr>
-          <th>所属チーム</th>
-          <td>{{player.team}}</td>
-        </tr>
-        <tr>
-          <th>ポジション</th>
-          <td>{{player.position}}</td>
-        </tr>
-        <tr>
-          <th>出身地</th>
-          <td>{{player.hometown}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  @if (player) {
+    <div>
+      <table class="baseball-player-detail">
+        <thead>
+          <tr>
+            <th colspan="2">野球選手詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>ＩＤ番号</th>
+            <td>{{player.id}}</td>
+          </tr>
+          <tr>
+            <th>選手名</th>
+            <td>{{player.name}}</td>
+          </tr>
+          <tr>
+            <th>所属チーム</th>
+            <td>{{player.team}}</td>
+          </tr>
+          <tr>
+            <th>ポジション</th>
+            <td>{{player.position}}</td>
+          </tr>
+          <tr>
+            <th>出身地</th>
+            <td>{{player.hometown}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  }
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-default" (click)="openModalWithEditComponent()">編集</button>
