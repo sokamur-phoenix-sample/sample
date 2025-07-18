@@ -43,9 +43,9 @@ zone.js                         0.15.1
 ```
 $ git clone https://github.com/sokamur-phoenix-sample/sample.git
 $ cd sample
-$ docker-compose up -d --build
-$ docker-compose exec app bin/rails db:migrate
-$ docker-compose exec app bin/rails db:seed
+$ docker compose up -d --build
+$ docker compose exec app bin/rails db:migrate
+$ docker compose exec app bin/rails db:seed
 * URL
 <http://localhost:3000>
 ```
