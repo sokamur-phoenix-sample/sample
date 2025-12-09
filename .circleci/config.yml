@@ -25,7 +25,8 @@ jobs:
           name: Install Ruby Dependencies
           command: >-
             bash -c "bundle config set --local path 'vendor/bundle' &&
-            bundle install --clean"
+            bundle config set clean 'true' &&
+            bundle install"
       - save_cache:
           key: bundle-{{ checksum "Gemfile" }}
           paths: vendor/bundle
