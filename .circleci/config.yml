@@ -7,7 +7,7 @@ jobs:
     parallelism: 1
     working_directory: ~/app
     docker:
-      - image: cimg/ruby:3.4.1-browsers
+      - image: cimg/ruby:4.0.1-browsers
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -49,7 +49,7 @@ jobs:
           path: coverage
   bundle_update:
     docker:
-      - image: cimg/ruby:3.4.1-node
+      - image: cimg/ruby:4.0.1-node
     steps:
       - checkout
       - run:
