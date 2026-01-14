@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@2.6.0
+  ruby: circleci/ruby@2.3.1
   browser-tools: circleci/browser-tools@1.5.0
 jobs:
   build:
