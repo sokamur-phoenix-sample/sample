@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-chrome:
-          chrome-version: 116.0.5845.96
+          chrome-version: 124.0.6367.78
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile" }}
