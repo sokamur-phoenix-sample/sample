@@ -26,7 +26,9 @@ jobs:
           command: >-
             bash -c "bundle config set --local path 'vendor/bundle' &&
             bundle config set clean 'true' &&
-            bundle install"
+            bundle install --jobs=4"
+          environment:
+            GRPC_RUBY_BUILD_PROCS: 4
       - save_cache:
           key: bundle-{{ checksum "Gemfile" }}
           paths: vendor/bundle
