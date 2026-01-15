@@ -1,6 +1,3 @@
-import { ApolloModule, Apollo } from 'apollo-angular';
-import { HttpLink } from 'apollo-angular/http';
-import { InMemoryCache } from '@apollo/client/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -8,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
@@ -27,6 +23,7 @@ import { BaseballPlayerService } from './services/baseball-player.service';
 import { BaseballPlayerShowComponent } from './components/baseball-player-show/baseball-player-show.component';
 import { BaseballPlayerEditComponent } from './components/baseball-player-edit/baseball-player-edit.component';
 import { ScheduleCalendarComponent } from './components/schedule-calendar/schedule-calendar.component';
+import { GraphQLModule } from './graphql.module';
 
 // FullCalendarModule.registerPlugins([
 //   dayGridPlugin,
@@ -43,9 +40,7 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
         ScheduleCalendarComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
-        BrowserAnimationsModule,
         AppRoutingModule,
-        ApolloModule,
         FormsModule,
         MatTableModule,
         MatToolbarModule,
@@ -56,15 +51,16 @@ import { ScheduleCalendarComponent } from './components/schedule-calendar/schedu
         MatButtonModule,
         MatCheckboxModule,
         FullCalendarModule,
-        ModalModule.forRoot()], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        ModalModule.forRoot(),
+        GraphQLModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
-  constructor(
-    apollo: Apollo,
-    httpLink: HttpLink
-  ) {
-    apollo.create({
-      link: httpLink.create({uri: 'http://localhost:3000/graphql'}),
-      cache: new InMemoryCache()
-    });
-  }
+  // constructor(
+  //   apollo: Apollo,
+  //   httpLink: HttpLink
+  // ) {
+  //   apollo.create({
+  //     link: httpLink.create({uri: 'http://localhost:3000/graphql'}),
+  //     cache: new InMemoryCache()
+  //   });
+  // }
 }
