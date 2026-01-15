@@ -1,7 +1,7 @@
 # README
 
 * **Server Side: Rails v8.0**
-* **Front End: Angular v20.0.3**
+* **Front End: Angular v21.1.0**
 * **Database: SQLite3**
 
 ```
@@ -13,29 +13,37 @@ $ ng version
   / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
                 |___/
-    
 
-Angular CLI: 20.0.3
-Node: 22.16.0
-Package Manager: npm 11.4.2
-OS: linux x64
 
-Angular: 20.0.3
-... animations, cdk, common, compiler, compiler-cli, core, forms
-... language-service, material, platform-browser
-... platform-browser-dynamic, platform-server, router
+Angular CLI       : 21.1.0
+Angular           : 21.1.0
+Node.js           : 24.13.0
+Package Manager   : npm 11.7.0
+Operating System  : linux x64
 
-Package                         Version
----------------------------------------------------------
-@angular-devkit/architect       0.2000.2
-@angular-devkit/build-angular   20.0.2
-@angular-devkit/core            20.0.2
-@angular-devkit/schematics      20.0.2
-@angular/cli                    20.0.2
-@schematics/angular             20.0.2
-rxjs                            6.6.7
-typescript                      5.8.3
-zone.js                         0.15.1
+┌───────────────────────────────────┬───────────────────┬───────────────────┐
+│ Package                           │ Installed Version │ Requested Version │
+├───────────────────────────────────┼───────────────────┼───────────────────┤
+│ @angular-devkit/build-angular     │ 21.1.0            │ ^21.1.0           │
+│ @angular-devkit/schematics        │ 21.1.0            │ ^21.1.0           │
+│ @angular/animations               │ 21.1.0            │ ^21.1.0           │
+│ @angular/cdk                      │ 21.1.0            │ ^21.1.0           │
+│ @angular/cli                      │ 21.1.0            │ ^21.1.0           │
+│ @angular/common                   │ 21.1.0            │ ^21.1.0           │
+│ @angular/compiler                 │ 21.1.0            │ ^21.1.0           │
+│ @angular/compiler-cli             │ 21.1.0            │ ^21.1.0           │
+│ @angular/core                     │ 21.1.0            │ ^21.1.0           │
+│ @angular/forms                    │ 21.1.0            │ ^21.1.0           │
+│ @angular/language-service         │ 21.1.0            │ ^21.1.0           │
+│ @angular/material                 │ 21.1.0            │ ^21.1.0           │
+│ @angular/platform-browser         │ 21.1.0            │ ^21.1.0           │
+│ @angular/platform-browser-dynamic │ 21.1.0            │ ^21.1.0           │
+│ @angular/platform-server          │ 21.1.0            │ ^21.1.0           │
+│ @angular/router                   │ 21.1.0            │ ^21.1.0           │
+│ rxjs                              │ 7.8.2             │ ^7.8.2            │
+│ typescript                        │ 5.9.3             │ ^5.4.5            │
+│ zone.js                           │ 0.15.1            │ ~0.15.0           │
+└───────────────────────────────────┴───────────────────┴───────────────────┘
 ```
 
 ### 開発環境の準備
