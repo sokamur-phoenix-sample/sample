@@ -57,7 +57,7 @@ jobs:
       - run:
           name : bundle update
           command: |
-            gem install circleci-bundle-update-pr -N
+            gem install -N circleci-bundle-update-pr
             circleci-bundle-update-pr ${BUNDLE_UPDATE_GITHUB_USERNAME} ${BUNDLE_UPDATE_GITHUB_EMAIL}
 workflows:
   version: 2.1
