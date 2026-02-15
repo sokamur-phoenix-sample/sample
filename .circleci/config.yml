@@ -54,8 +54,6 @@ jobs:
       - image: cimg/ruby:4.0-node
     steps:
       - checkout
-      - node/install:
-          node-version: '24.13'
       - run:
           name : bundle update
           command: >-
