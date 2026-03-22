@@ -51,7 +51,7 @@ jobs:
           path: coverage
   bundle_update:
     docker:
-      - image: cimg/ruby:4.0-node
+      - image: cimg/ruby:4.0.1-node
     steps:
       - checkout
       - run:
