@@ -54,9 +54,9 @@ jobs:
       - image: cimg/ruby:4.0.1-node
     steps:
       - checkout
-      - run:
-          name: Install Compatible Bundler
-          command: gem install bundler -v '4.0.8'
+      # - run:
+      #     name: Install Compatible Bundler
+      #     command: gem install bundler -v '4.0.8'
       - run:
           name : bundle update
           command: >-
@@ -71,7 +71,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "50 14 * * 0"
+          cron: "30 15 * * 0"
           filters:
             branches:
               only:
