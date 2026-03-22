@@ -55,6 +55,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Compatible Bundler
+          command: gem install bundler -v '4.0.8'
+      - run:
           name : bundle update
           command: >-
             bash -c "gem update bundler &&
@@ -68,7 +71,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "20 14 * * 0"
+          cron: "50 14 * * 0"
           filters:
             branches:
               only:
