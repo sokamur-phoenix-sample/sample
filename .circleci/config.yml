@@ -55,6 +55,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Update RubyGems and Bundler
+          command: |
+            sudo gem update --system
+            gem install bundler
+      - run:
           name : bundle update
           command: >-
             bash -c "gem update bundler &&
