@@ -55,11 +55,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update RubyGems and Bundler
-          command: |
-            sudo gem update --system
-            gem install bundler
-      - run:
           name : bundle update
           command: >-
             bash -c "gem update bundler &&
@@ -73,7 +68,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "30 9 * * 6"
+          cron: "50 18 * * 6"
           filters:
             branches:
               only:
