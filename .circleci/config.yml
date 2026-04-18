@@ -55,15 +55,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update RubyGems and Bundler
-          command: |
-            rm Gemfile.lock
-            rm -rf .bundle
-            bunndle install
-      - run:
           name : bundle update
           command: >-
-            bash -c "gem update bundler &&
+            bash -c "
+            bundle config set --global simulate_version 4.0.1 &&
+            bundle config set --local simulate_version 4.0.1 &&
+            gem update bundler &&
             gem install circleci-bundle-update-pr &&
             circleci-bundle-update-pr ${BUNDLE_UPDATE_GITHUB_USERNAME} ${BUNDLE_UPDATE_GITHUB_EMAIL}"
 workflows:
@@ -74,7 +71,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "50 4 * * 6"
+          cron: "30 5 * * 6"
           filters:
             branches:
               only:
