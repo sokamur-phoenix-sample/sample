@@ -60,7 +60,9 @@ jobs:
             bash -c "
             bundle config set --global simulate_version 4.0.1 &&
             bundle config set --local simulate_version 4.0.1 &&
-            gem update bundler &&
+            gem install bundler &&
+            rm -rf .bundle/ vendor/bundle &&
+            bundle install &&
             gem install circleci-bundle-update-pr &&
             circleci-bundle-update-pr ${BUNDLE_UPDATE_GITHUB_USERNAME} ${BUNDLE_UPDATE_GITHUB_EMAIL}"
 workflows:
@@ -71,7 +73,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "30 5 * * 6"
+          cron: "0 6 * * 6"
           filters:
             branches:
               only:
