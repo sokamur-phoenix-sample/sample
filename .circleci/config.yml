@@ -13,6 +13,7 @@ jobs:
           DB_HOST: 127.0.0.1
           TZ: /usr/share/zoneinfo/Asia/Tokyo
           CIRCLE_TEST_REPORTS: /tmp/test-results
+    resource_class: large
     steps:
       - checkout
       - browser-tools/install_browser_tools
@@ -52,6 +53,7 @@ jobs:
   bundle_update:
     docker:
       - image: cimg/ruby:4.0.1-node
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -73,7 +75,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "55 14 * * 6"
+          cron: "10 15 * * 6"
           filters:
             branches:
               only:
