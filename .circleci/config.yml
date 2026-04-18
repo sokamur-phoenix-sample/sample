@@ -60,7 +60,6 @@ jobs:
             rm Gemfile.lock
             rm -rf .bundle
             bunndle install
-            bundle update
       - run:
           name : bundle update
           command: >-
@@ -75,7 +74,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "30 4 * * 6"
+          cron: "50 4 * * 6"
           filters:
             branches:
               only:
