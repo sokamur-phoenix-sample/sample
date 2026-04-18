@@ -72,7 +72,7 @@ workflows:
   circleci_bundle_update_pr:
     triggers:
       - schedule:
-          cron: "20 16 * * 6"
+          cron: "35 16 * * 6"
           filters:
             branches:
               only:
