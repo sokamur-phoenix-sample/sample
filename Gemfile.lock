@@ -122,7 +122,7 @@ GEM
       activesupport (>= 7.2, < 8.3)
     graphiql-rails (1.10.5)
       railties
-    graphql (2.6.0)
+    graphql (2.6.1)
       base64
       fiber-storage
       logger
@@ -457,7 +457,7 @@ CHECKSUMS
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
   goldiloader (6.0.0) sha256=613db1b28e9964291255a67a521f04d481b6afd6b9ca56ea1a612fd86e9a89c7
   graphiql-rails (1.10.5) sha256=d911486eeac01e125d403a61c04f634cccaff9f8ecee5dc4efce3e7aa11bf5d3
-  graphql (2.6.0) sha256=ec04e6bf439b824db2a077635b45f2175cfef555b68583c7ab6dd3a67958e753
+  graphql (2.6.1) sha256=e4b4290dda309fcfba2df38cacf4ee67e2194e06f09b9efbd7738f1df7e41967
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
