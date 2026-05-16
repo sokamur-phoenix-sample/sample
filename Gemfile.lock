@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    action_text-trix (2.1.18)
+    action_text-trix (2.1.19)
       railties
     actioncable (8.1.3)
       actionpack (= 8.1.3)
@@ -122,7 +122,7 @@ GEM
       activesupport (>= 7.2, < 8.3)
     graphiql-rails (1.10.5)
       railties
-    graphql (2.6.1)
+    graphql (2.6.2)
       base64
       fiber-storage
       logger
@@ -134,7 +134,7 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    jbuilder (2.14.1)
+    jbuilder (2.15.0)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
     json (2.19.5)
@@ -287,7 +287,7 @@ GEM
     rswag-ui (2.17.0)
       actionpack (>= 5.2, < 8.2)
       railties (>= 5.2, < 8.2)
-    rubocop (1.86.1)
+    rubocop (1.86.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -318,7 +318,7 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
-    selenium-webdriver (4.43.0)
+    selenium-webdriver (4.44.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -414,7 +414,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 CHECKSUMS
-  action_text-trix (2.1.18) sha256=3fdb83f8bff4145d098be283cdd47ac41caf5110bfa6df4695ed7127d7fb3642
+  action_text-trix (2.1.19) sha256=7012f59421009cf284aa651294896414d653a61a2417c9b8714c8476d2f74009
   actioncable (8.1.3) sha256=e5bc7f75e44e6a22de29c4f43176927c3a9ce4824464b74ed18d8226e75a80f0
   actionmailbox (8.1.3) sha256=df7da474eaa0e70df4ed5a6fef66eb3b3b0f2dbf7f14518deee8d77f1b4aae59
   actionmailer (8.1.3) sha256=831f724891bb70d0aaa4d76581a6321124b6a752cb655c9346aae5479318448d
@@ -457,11 +457,11 @@ CHECKSUMS
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
   goldiloader (6.0.0) sha256=613db1b28e9964291255a67a521f04d481b6afd6b9ca56ea1a612fd86e9a89c7
   graphiql-rails (1.10.5) sha256=d911486eeac01e125d403a61c04f634cccaff9f8ecee5dc4efce3e7aa11bf5d3
-  graphql (2.6.1) sha256=e4b4290dda309fcfba2df38cacf4ee67e2194e06f09b9efbd7738f1df7e41967
+  graphql (2.6.2) sha256=42971edc2281c963cb94b4fcef4897ff7ffe3a52c4467706df6fe0531f1b4858
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
-  jbuilder (2.14.1) sha256=4eb26376ff60ef100cb4fd6fd7533cd271f9998327e86adf20fd8c0e69fabb42
+  jbuilder (2.15.0) sha256=fe36cd45b47dd88cb2cbebc3adc4348f041825f580d503578594e8255817f889
   json (2.19.5) sha256=218a18553e4801d579ca7e0f5bc72bafd776d7397238a1fb4e74db5b0a812c59
   json-schema (6.2.0) sha256=e8bff46ed845a22c1ab2bd0d7eccf831c01fe23bb3920caa4c74db4306813666
   language_server-protocol (3.17.0.5) sha256=fd1e39a51a28bf3eec959379985a72e296e9f9acfce46f6a79d31ca8760803cc
@@ -523,7 +523,7 @@ CHECKSUMS
   rswag-api (2.17.0) sha256=728b336b65168ab8ab6024b0e5d267b485c22ccdeb9dfbfb6ec3bac423545a13
   rswag-specs (2.17.0) sha256=a3b2bdf6df89f8741fe4a4ee47ceb1e77dc13e1c96bbe07352117d6e61afa9e3
   rswag-ui (2.17.0) sha256=5f707b9b5e8171ddf9f519f6e401e79e419bd1d07387508603e76124f2443212
-  rubocop (1.86.1) sha256=44415f3f01d01a21e01132248d2fd0867572475b566ca188a0a42133a08d4531
+  rubocop (1.86.2) sha256=bb2e97f635eda42c448f2588f4a6ff78f221b8bdfdf65b1e9b07fbd57521b45d
   rubocop-ast (1.49.1) sha256=4412f3ee70f6fe4546cc489548e0f6fcf76cafcfa80fa03af67098ffed755035
   rubocop-rails (2.35.0) sha256=a5d9f0f6c6d9b73d9ddd181c4c0b6d2e00dd17107480828d31c7b369ebfcd49c
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
@@ -531,7 +531,7 @@ CHECKSUMS
   sassc (2.4.0) sha256=4c60a2b0a3b36685c83b80d5789401c2f678c1652e3288315a1551d811d9f83e
   sassc-rails (2.1.2) sha256=5f4fdf3881fc9bdc8e856ffbd9850d70a2878866feae8114aa45996179952db5
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  selenium-webdriver (4.43.0) sha256=a634377b964b701c6ac0a009ce3a08fa34ec1e1e7fe9a6d57e3088d14529a65c
+  selenium-webdriver (4.44.0) sha256=6f1df072529af369589c46f0e01132952aabb250cfd683c274d74dc1eb5d8477
   simplecov (0.22.0) sha256=fe2622c7834ff23b98066bb0a854284b2729a569ac659f82621fc22ef36213a5
   simplecov-html (0.13.2) sha256=bd0b8e54e7c2d7685927e8d6286466359b6f16b18cb0df47b508e8d73c777246
   simplecov_json_formatter (0.1.4) sha256=529418fbe8de1713ac2b2d612aa3daa56d316975d307244399fa4838c601b428
