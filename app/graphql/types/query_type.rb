@@ -11,8 +11,8 @@ module Types
 
     def schedules(args = {})
       schedules = Schedule.all
-      schedules =  schedules.where(user_id: args[:user_id]) if args[:user_id].present?
-      schedules =  schedules.where(contractor_id: args[:contractor_id]) if args[:contractor_id].present?
+      schedules = schedules.where(user_id: args[:user_id]) if args[:user_id].present?
+      schedules = schedules.where(contractor_id: args[:contractor_id]) if args[:contractor_id].present?
       schedules
     end
 
