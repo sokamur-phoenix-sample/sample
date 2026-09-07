@@ -1,7 +1,7 @@
 # README
 
 * **Server Side: Rails v8.1.3**
-* **Front End: Angular v21.1.0**
+* **Front End: Angular v22.1.5**
 * **Database: SQLite3**
 
 ```
@@ -15,33 +15,33 @@ $ ng version
                 |___/
 
 
-Angular CLI       : 21.1.0
-Angular           : 21.1.0
-Node.js           : 24.13.0
-Package Manager   : npm 11.7.0
+Angular CLI       : 22.1.7
+Angular           : 22.1.5
+Node.js           : 24.20.0
+Package Manager   : npm 11.19.0
 Operating System  : linux x64
 
 ┌───────────────────────────────────┬───────────────────┬───────────────────┐
 │ Package                           │ Installed Version │ Requested Version │
 ├───────────────────────────────────┼───────────────────┼───────────────────┤
-│ @angular-devkit/build-angular     │ 21.1.0            │ ^21.1.0           │
-│ @angular-devkit/schematics        │ 21.1.0            │ ^21.1.0           │
-│ @angular/animations               │ 21.1.0            │ ^21.1.0           │
-│ @angular/cdk                      │ 21.1.0            │ ^21.1.0           │
-│ @angular/cli                      │ 21.1.0            │ ^21.1.0           │
-│ @angular/common                   │ 21.1.0            │ ^21.1.0           │
-│ @angular/compiler                 │ 21.1.0            │ ^21.1.0           │
-│ @angular/compiler-cli             │ 21.1.0            │ ^21.1.0           │
-│ @angular/core                     │ 21.1.0            │ ^21.1.0           │
-│ @angular/forms                    │ 21.1.0            │ ^21.1.0           │
-│ @angular/language-service         │ 21.1.0            │ ^21.1.0           │
-│ @angular/material                 │ 21.1.0            │ ^21.1.0           │
-│ @angular/platform-browser         │ 21.1.0            │ ^21.1.0           │
-│ @angular/platform-browser-dynamic │ 21.1.0            │ ^21.1.0           │
-│ @angular/platform-server          │ 21.1.0            │ ^21.1.0           │
-│ @angular/router                   │ 21.1.0            │ ^21.1.0           │
+│ @angular-devkit/build-angular     │ 22.1.7            │ ^22.1.7           │
+│ @angular-devkit/schematics        │ 22.1.7            │ ^22.1.7           │
+│ @angular/animations               │ 22.1.5            │ ^22.1.5           │
+│ @angular/cdk                      │ 22.1.5            │ ^22.1.5           │
+│ @angular/cli                      │ 22.1.7            │ ^22.1.7           │
+│ @angular/common                   │ 22.1.5            │ ^22.1.5           │
+│ @angular/compiler                 │ 22.1.5            │ ^22.1.5           │
+│ @angular/compiler-cli             │ 22.1.5            │ ^22.1.5           │
+│ @angular/core                     │ 22.1.5            │ ^22.1.5           │
+│ @angular/forms                    │ 22.1.5            │ ^22.1.5           │
+│ @angular/language-service         │ 22.1.5            │ ^22.1.5           │
+│ @angular/material                 │ 22.1.5            │ ^22.1.5           │
+│ @angular/platform-browser         │ 22.1.5            │ ^22.1.5           │
+│ @angular/platform-browser-dynamic │ 22.1.5            │ ^22.1.5           │
+│ @angular/platform-server          │ 22.1.5            │ ^22.1.5           │
+│ @angular/router                   │ 22.1.5            │ ^22.1.5           │
 │ rxjs                              │ 7.8.2             │ ^7.8.2            │
-│ typescript                        │ 5.9.3             │ ^5.4.5            │
+│ typescript                        │ 6.0.3             │ ^6.0.3            │
 │ zone.js                           │ 0.15.1            │ ~0.15.0           │
 └───────────────────────────────────┴───────────────────┴───────────────────┘
 ```
