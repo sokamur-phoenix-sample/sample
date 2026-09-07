@@ -51,7 +51,7 @@ import { GraphQLModule } from './graphql.module';
         MatButtonModule,
         MatCheckboxModule,
         FullCalendarModule,
-        ModalModule.forRoot(),
+        ModalModule,
         GraphQLModule], providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule {
   // constructor(
