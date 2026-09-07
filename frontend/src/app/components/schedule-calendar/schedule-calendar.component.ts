@@ -1,5 +1,5 @@
 import {Apollo, gql} from 'apollo-angular';
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core';
 import { EventInput } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -29,6 +29,7 @@ const GET_SCHEDULES = gql`
     selector: 'app-schedule-calendar',
     templateUrl: './schedule-calendar.component.html',
     styleUrls: ['./schedule-calendar.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ScheduleCalendarComponent implements OnInit {

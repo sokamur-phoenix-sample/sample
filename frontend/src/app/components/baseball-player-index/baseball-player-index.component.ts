@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { BaseballPlayer } from '../../models/baseball-player';
@@ -9,6 +9,7 @@ import { BaseballPlayerShowComponent }  from '../baseball-player-show/baseball-p
     selector: 'app-baseball-player-index',
     templateUrl: './baseball-player-index.component.html',
     styleUrls: ['./baseball-player-index.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BaseballPlayerIndexComponent implements OnInit {

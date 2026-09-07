@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,7 +52,7 @@ import { GraphQLModule } from './graphql.module';
         MatCheckboxModule,
         FullCalendarModule,
         ModalModule.forRoot(),
-        GraphQLModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        GraphQLModule], providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule {
   // constructor(
   //   apollo: Apollo,

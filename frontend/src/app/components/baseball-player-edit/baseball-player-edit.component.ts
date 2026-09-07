@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BaseballPlayer } from '../../models/baseball-player';
 import { BaseballPlayerService } from '../../services/baseball-player.service';
@@ -7,6 +7,7 @@ import { BaseballPlayerService } from '../../services/baseball-player.service';
     selector: 'app-baseball-player-edit',
     templateUrl: './baseball-player-edit.component.html',
     styleUrls: ['./baseball-player-edit.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BaseballPlayerEditComponent implements OnInit {
