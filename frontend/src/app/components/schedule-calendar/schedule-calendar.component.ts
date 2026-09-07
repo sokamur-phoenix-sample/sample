@@ -35,9 +35,9 @@ const GET_SCHEDULES = gql`
 export class ScheduleCalendarComponent implements OnInit {
 
   private calendarElement: any;
-  calendarOptions: CalendarOptions;
+  calendarOptions!: CalendarOptions;
   private calendarEvents: EventInput[] = [];
-  private loading: boolean;
+  private loading = false;
 
   constructor(
     private elementRef: ElementRef,

@@ -12,8 +12,8 @@ import { BaseballPlayerService } from '../../services/baseball-player.service';
 })
 export class BaseballPlayerEditComponent implements OnInit {
 
-  public title: string;
-  public player: BaseballPlayer;
+  public title!: string;
+  public player!: BaseballPlayer;
 
   constructor(
     public bsModalRef2: BsModalRef,

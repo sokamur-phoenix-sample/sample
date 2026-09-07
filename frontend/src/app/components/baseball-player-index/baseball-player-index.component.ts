@@ -14,9 +14,9 @@ import { BaseballPlayerShowComponent }  from '../baseball-player-show/baseball-p
 })
 export class BaseballPlayerIndexComponent implements OnInit {
 
-  dataSource: BaseballPlayer[];
+  dataSource!: BaseballPlayer[];
   displayedColumns = ['id', 'name', 'team', 'position', 'hometown'];
-  bsModalRef: BsModalRef;
+  bsModalRef!: BsModalRef;
 
   constructor(
     private baseballPlayerService: BaseballPlayerService,
