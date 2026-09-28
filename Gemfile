@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "json", "~> 2.21" # FIX ME: After fixed json of v3.x gem released.
 gem "ruby-vips", require: false
 
 gem 'csv'
