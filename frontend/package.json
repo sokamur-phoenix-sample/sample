@@ -24,7 +24,7 @@
     "@angular/platform-browser": "^22.1.5",
     "@angular/platform-browser-dynamic": "^22.1.5",
     "@angular/platform-server": "^22.1.5",
-    "@angular/router": "^22.1.5",
+    "@angular/router": "^22.2.0",
     "@apollo/client": "^4.0.13",
     "@fullcalendar/angular": "^6.1.17",
     "@fullcalendar/core": "^6.1.17",
