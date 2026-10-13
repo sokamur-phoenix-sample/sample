@@ -58,7 +58,7 @@
     "circular-dependency-plugin": "^3.0.0",
     "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^6.7.1",
-    "cssnano": "^5.0.8",
+    "cssnano": "^9.8.0",
     "eslint": "^8.57.0",
     "exports-loader": "^0.6.3",
     "file-loader": "^0.10.0",
